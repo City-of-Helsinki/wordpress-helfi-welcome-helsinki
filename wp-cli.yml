@@ -1,0 +1,24 @@
+path: web/wp
+server:
+  docroot: web
+
+require:
+  - vendor/generoi/genero-conf/wp/wp-cli-pre-ssh.php
+
+'@docker':
+  path: /var/www/html/web/wp
+  url: welcome.helsinki.ddev.local
+
+'@dev':
+  ssh: vagrant@welcome.helsinki.test/var/www/wordpress/web/wp
+  url: welcome.helsinki.test
+
+'@staging':
+  ssh: welcomehelsinki@35.228.245.82:36906/www/welcomehelsinki_228/public/current/web/wp
+  url: staging-welcomehelsinki.kinsta.cloud
+
+'@production':
+  ssh: welcomehelsinki@35.228.245.82:60423/www/welcomehelsinki_228/public/current/web/wp
+  url: welcomehelsinki.kinsta.cloud
+  # bin_path: $HOME/.config/composer/vendor/bin
+  # php_path: /usr/bin/php72
