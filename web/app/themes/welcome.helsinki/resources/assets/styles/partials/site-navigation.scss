@@ -84,17 +84,23 @@
       // Position the angle icon if it exist, submenu is absolute anyways
       display: flex;
       font-weight: bold;
+      white-space: nowrap;
 
       // Items are horizontal
       &:not(:last-child) {
-        margin-right: $spacing-m;
+        margin-right: $spacing-s;
+      }
+
+      .is-level-2 {
+        width: 100%;
+        margin-right: 0;
       }
     }
 
     &__link {
       display: inline-block;
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: $spacing-3-xs;
+      padding-right: $spacing-3-xs;
 
       // A bottom border bar shown on hover and active state
       &::after {
@@ -109,14 +115,15 @@
         transition: all 100ms ease-out;
       }
 
-      .is-level-1 > &:focus::after,
-      .is-level-1[aria-expanded="true"] > &::after {
+      .is-level-1:not(.has-children) > &:focus::after,
+      .is-level-1:not(.has-children)[aria-expanded="true"] > &::after {
         left: 0;
         right: 0;
         border-bottom-color: $color-black-90;
       }
 
-      &:focus {
+      &:focus,
+      .is-level-1.has-children[aria-expanded="true"] > & {
         outline: none;
         box-shadow: 0 0 0 3px $color-focus-outline-text-input-default;
         transform: translate3d(0, 0, 0);
@@ -138,7 +145,7 @@
       display: none;
       position: absolute;
       left: 0;
-      width: 190px;
+      width: 100%;
       top: 100%;
       background-color: $color-white;
       border: solid 1px $color-black-90;

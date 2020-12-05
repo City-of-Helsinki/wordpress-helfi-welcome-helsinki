@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Updated navigation styles.
 - Removed automatic excerpts.
 
 ## 0.1.0
