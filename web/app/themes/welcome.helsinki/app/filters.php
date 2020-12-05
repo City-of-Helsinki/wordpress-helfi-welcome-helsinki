@@ -144,3 +144,10 @@ add_filter('redirect_canonical', function ($redirect_url) {
     }
     return $redirect_url;
 });
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt', 10, 2);
+add_filter('get_the_excerpt', function ($excerpt, $post) {
+    return $post->post_excerpt ?
+        $excerpt :
+        '';
+}, 10, 2);
