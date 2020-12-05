@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Updated Helsinki Design System version.
 - Updated navigation styles.
 - Removed automatic excerpts.
 

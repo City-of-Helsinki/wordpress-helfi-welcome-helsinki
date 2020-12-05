@@ -52,7 +52,7 @@
 
   &__email {
     a {
-      font-size: $fontsize-h-4;
+      font-size: $fontsize-heading-s;
       color: inherit;
       text-decoration: none;
       font-weight: bold;
@@ -60,7 +60,7 @@
   }
 
   &__description {
-    font-size: $fontsize-body-default;
+    font-size: $fontsize-body-m;
   }
 
   &.layout-vertical {

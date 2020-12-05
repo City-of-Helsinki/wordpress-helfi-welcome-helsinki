@@ -1,63 +1,248 @@
 [
   {
-    "name": "Coat of Arms Blue",
-    "slug": "primary",
+    "name": "Brick",
+    "slug": "brick",
+    "color": "#bd2719"
+  },
+  {
+    "name": "Brick light",
+    "slug": "brick-light",
+    "color": "#ffeeed"
+  },
+  {
+    "name": "Brick medium light",
+    "slug": "brick-medium-light",
+    "color": "#facbc8"
+  },
+  {
+    "name": "Brick dark",
+    "slug": "brick-dark",
+    "color": "#800e04"
+  },
+  {
+    "name": "Bus",
+    "slug": "bus",
+    "color": "#0000bf"
+  },
+  {
+    "name": "Bus light",
+    "slug": "bus-light",
+    "color": "#f0f0ff"
+  },
+  {
+    "name": "Bus medium light",
+    "slug": "bus-medium-light",
+    "color": "#ccccff"
+  },
+  {
+    "name": "Bus dark",
+    "slug": "bus-dark",
+    "color": "#00005e"
+  },
+  {
+    "name": "Coat of arms",
+    "slug": "coat-of-arms",
     "color": "#0072c6"
   },
   {
-    "name": "Coat of Arms Blue",
-    "slug": "c-vakuuna-vakuuna",
-    "color": "#0072c6"
+    "name": "Coat of arms light",
+    "slug": "coat-of-arms-light",
+    "color": "#e6f4ff"
   },
   {
-    "name": "Secondary",
-    "slug": "secondary",
-    "color": "#767676"
+    "name": "Coat of arms medium light",
+    "slug": "coat-of-arms-medium-light",
+    "color": "#b5daf7"
   },
   {
-    "name": "Summer",
-    "slug": "c-kes-kes",
-    "color": "#ffc61e"
-  },
-  {
-    "name": "Summer Light 20",
-    "slug": "c-kes-kes-light-20",
-    "color": "#fff3d2"
+    "name": "Coat of arms dark",
+    "slug": "coat-of-arms-dark",
+    "color": "#005799"
   },
   {
     "name": "Copper",
-    "slug": "c-kupari-kupari",
+    "slug": "copper",
     "color": "#00d7a7"
   },
   {
-    "name": "Copper Light 20",
-    "slug": "c-kupari-kupari-light-20",
-    "color": "#ccf7ed"
+    "name": "Copper light",
+    "slug": "copper-light",
+    "color": "#cffaf1"
   },
   {
-    "name": "Fog Light 20",
-    "slug": "c-sumu-sumu-light-20",
-    "color": "#ebf4fb"
+    "name": "Copper medium light",
+    "slug": "copper-medium-light",
+    "color": "#9ef0de"
+  },
+  {
+    "name": "Copper dark",
+    "slug": "copper-dark",
+    "color": "#00a17d"
+  },
+  {
+    "name": "Engel",
+    "slug": "engel",
+    "color": "#ffe977"
+  },
+  {
+    "name": "Engel light",
+    "slug": "engel-light",
+    "color": "#fff9db"
+  },
+  {
+    "name": "Engel medium light",
+    "slug": "engel-medium-light",
+    "color": "#fff3b8"
+  },
+  {
+    "name": "Engel dark",
+    "slug": "engel-dark",
+    "color": "#dbc030"
+  },
+  {
+    "name": "Fog",
+    "slug": "fog",
+    "color": "#9fc9eb"
+  },
+  {
+    "name": "Fog light",
+    "slug": "fog-light",
+    "color": "#e8f3fc"
+  },
+  {
+    "name": "Fog medium light",
+    "slug": "fog-medium-light",
+    "color": "#d0e6f7"
+  },
+  {
+    "name": "Fog dark",
+    "slug": "fog-dark",
+    "color": "#72a5cf"
+  },
+  {
+    "name": "Gold",
+    "slug": "gold",
+    "color": "#c2a251"
+  },
+  {
+    "name": "Gold light",
+    "slug": "gold-light",
+    "color": "#f7f2e4"
+  },
+  {
+    "name": "Gold medium light",
+    "slug": "gold-medium-light",
+    "color": "#e8d7a7"
+  },
+  {
+    "name": "Gold dark",
+    "slug": "gold-dark",
+    "color": "#9e823c"
+  },
+  {
+    "name": "Metro",
+    "slug": "metro",
+    "color": "#fd4f00"
+  },
+  {
+    "name": "Metro light",
+    "slug": "metro-light",
+    "color": "#ffeee6"
+  },
+  {
+    "name": "Metro medium light",
+    "slug": "metro-medium-light",
+    "color": "#ffcab3"
+  },
+  {
+    "name": "Metro dark",
+    "slug": "metro-dark",
+    "color": "#bd2f00"
+  },
+  {
+    "name": "Silver",
+    "slug": "silver",
+    "color": "#dedfe1"
+  },
+  {
+    "name": "Silver light",
+    "slug": "silver-light",
+    "color": "#f7f7f8"
+  },
+  {
+    "name": "Silver medium light",
+    "slug": "silver-medium-light",
+    "color": "#efeff0"
+  },
+  {
+    "name": "Silver dark",
+    "slug": "silver-dark",
+    "color": "#b0b8bf"
+  },
+  {
+    "name": "Summer",
+    "slug": "summer",
+    "color": "#ffc61e"
+  },
+  {
+    "name": "Summer light",
+    "slug": "summer-light",
+    "color": "#fff4d4"
+  },
+  {
+    "name": "Summer medium light",
+    "slug": "summer-medium-light",
+    "color": "#ffe49c"
+  },
+  {
+    "name": "Summer dark",
+    "slug": "summer-dark",
+    "color": "#cc9200"
   },
   {
     "name": "Suomenlinna",
-    "slug": "c-suomenlinna-suomenlinna",
+    "slug": "suomenlinna",
     "color": "#f5a3c7"
   },
   {
-    "name": "Suomenlinna Light 20",
-    "slug": "c-suomenlinna-suomenlinna-light-20",
-    "color": "#fdecf3"
+    "name": "Suomenlinna light",
+    "slug": "suomenlinna-light",
+    "color": "#fff0f7"
   },
   {
-    "name": "Engel Light 20",
-    "slug": "c-engel-engel-light-20",
-    "color": "#fffae3"
+    "name": "Suomenlinna medium light",
+    "slug": "suomenlinna-medium-light",
+    "color": "#ffdbeb"
   },
   {
-    "name": "Light Grey",
-    "slug": "light-grey",
-    "color": "#f6f6f6"
+    "name": "Suomenlinna dark",
+    "slug": "suomenlinna-dark",
+    "color": "#e673a5"
+  },
+  {
+    "name": "Tram",
+    "slug": "tram",
+    "color": "#009246"
+  },
+  {
+    "name": "Tram light",
+    "slug": "tram-light",
+    "color": "#dff7eb"
+  },
+  {
+    "name": "Tram medium light",
+    "slug": "tram-medium-light",
+    "color": "#a3e3c2"
+  },
+  {
+    "name": "Tram dark",
+    "slug": "tram-dark",
+    "color": "#006631"
+  },
+  {
+    "name": "Black",
+    "slug": "black",
+    "color": "#000000"
   },
   {
     "name": "White",
@@ -65,18 +250,53 @@
     "color": "#ffffff"
   },
   {
+    "name": "Black 5",
+    "slug": "black-5",
+    "color": "#f1f1f1"
+  },
+  {
+    "name": "Black 10",
+    "slug": "black-10",
+    "color": "#e5e5e5"
+  },
+  {
     "name": "Black 20",
-    "slug": "c-black-20",
+    "slug": "black-20",
     "color": "#cccccc"
   },
   {
-    "name": "Black 90",
-    "slug": "dark-grey",
-    "color": "#1a1a1a"
+    "name": "Black 30",
+    "slug": "black-30",
+    "color": "#b2b2b2"
   },
   {
-    "name": "Black",
-    "slug": "black",
-    "color": "#000000"
+    "name": "Black 40",
+    "slug": "black-40",
+    "color": "#999898"
+  },
+  {
+    "name": "Black 50",
+    "slug": "black-50",
+    "color": "#808080"
+  },
+  {
+    "name": "Black 60",
+    "slug": "black-60",
+    "color": "#666666"
+  },
+  {
+    "name": "Black 70",
+    "slug": "black-70",
+    "color": "#4c4c4c"
+  },
+  {
+    "name": "Black 80",
+    "slug": "black-80",
+    "color": "#333333"
+  },
+  {
+    "name": "Black 90",
+    "slug": "black-90",
+    "color": "#1a1a1a"
   }
 ]

@@ -11,7 +11,7 @@
     font-weight: 500;
 
     &:focus {
-      outline: solid 3px $color-coat-of-arms-blue;
+      outline: solid 3px $color-coat-of-arms;
       outline-offset: 2px;
     }
   }
@@ -26,7 +26,7 @@
       }
 
       &:focus {
-        outline: solid 3px $color-coat-of-arms-blue;
+        outline: solid 3px $color-coat-of-arms;
         outline-offset: 2px;
       }
     }

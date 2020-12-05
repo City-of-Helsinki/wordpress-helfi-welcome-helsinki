@@ -57,7 +57,7 @@ blockquote {
 p {
   margin-block-start: 0;
   margin-block-end: $spacing-m;
-  font-size: $fontsize-body-medium;
+  font-size: $fontsize-body-l;
 
   &.description {
     // Does not correspond to any HDS size.
@@ -82,14 +82,14 @@ p {
 }
 
 a {
-  color: $color-coat-of-arms-blue;
+  color: $color-coat-of-arms;
 
   &:hover {
     background-color: #f2f2fc;
   }
 
   &:focus {
-    outline: auto 3px $color-coat-of-arms-blue;
+    outline: auto 3px $color-coat-of-arms;
     outline-offset: 2px;
   }
 }

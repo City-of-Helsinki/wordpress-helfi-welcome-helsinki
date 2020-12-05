@@ -8,7 +8,7 @@
   width: 100%;
 
   @include mq($from: large) {
-    max-width: calc(var(--container-width) * 1px);
+    max-width: var(--container-width);
   }
 
   @include ie11 {

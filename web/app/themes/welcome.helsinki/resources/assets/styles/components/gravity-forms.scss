@@ -16,7 +16,7 @@
   select,
   textarea {
     &:focus {
-      outline: solid 3px $color-coat-of-arms-blue;
+      outline: solid 3px $color-coat-of-arms;
       outline-offset: 2px;
       box-shadow: none;
     }
@@ -28,12 +28,12 @@
     width: auto !important;
     max-width: 100%;
     padding: $spacing-s $spacing-l !important;
-    background-color: $color-coat-of-arms-blue;
+    background-color: $color-coat-of-arms;
     color: white !important;
   }
 
   label {
-    font-size: $fontsize-h-4 !important;
+    font-size: $fontsize-heading-s !important;
   }
 
   .gfield_description {

@@ -20,28 +20,72 @@ $container-margins: (
 );
 
 $color-palette: (
-  'primary': $color-coat-of-arms-blue,
-  'secondary': #767676,
+  'brick': $color-brick,
+  'brick-light': $color-brick-light,
+  'brick-medium-light': $color-brick-medium-light,
+  'brick-dark': $color-brick-dark,
+  'bus': $color-bus,
+  'bus-light': $color-bus-light,
+  'bus-medium-light': $color-bus-medium-light,
+  'bus-dark': $color-bus-dark,
+  'coat-of-arms': $color-coat-of-arms,
+  'coat-of-arms-light': $color-coat-of-arms-light,
+  'coat-of-arms-medium-light': $color-coat-of-arms-medium-light,
+  'coat-of-arms-dark': $color-coat-of-arms-dark,
+  'copper': $color-copper,
+  'copper-light': $color-copper-light,
+  'copper-medium-light': $color-copper-medium-light,
+  'copper-dark': $color-copper-dark,
+  'engel': $color-engel,
+  'engel-light': $color-engel-light,
+  'engel-medium-light': $color-engel-medium-light,
+  'engel-dark': $color-engel-dark,
+  'fog': $color-fog,
+  'fog-light': $color-fog-light,
+  'fog-medium-light': $color-fog-medium-light,
+  'fog-dark': $color-fog-dark,
+  'gold': $color-gold,
+  'gold-light': $color-gold-light,
+  'gold-medium-light': $color-gold-medium-light,
+  'gold-dark': $color-gold-dark,
+  'metro': $color-metro,
+  'metro-light': $color-metro-light,
+  'metro-medium-light': $color-metro-medium-light,
+  'metro-dark': $color-metro-dark,
+  'silver': $color-silver,
+  'silver-light': $color-silver-light,
+  'silver-medium-light': $color-silver-medium-light,
+  'silver-dark': $color-silver-dark,
+  'summer': $color-summer,
+  'summer-light': $color-summer-light,
+  'summer-medium-light': $color-summer-medium-light,
+  'summer-dark': $color-summer-dark,
+  'suomenlinna': $color-suomenlinna,
+  'suomenlinna-light': $color-suomenlinna-light,
+  'suomenlinna-medium-light': $color-suomenlinna-medium-light,
+  'suomenlinna-dark': $color-suomenlinna-dark,
+  'tram': $color-tram,
+  'tram-light': $color-tram-light,
+  'tram-medium-light': $color-tram-medium-light,
+  'tram-dark': $color-tram-dark,
   'black': $color-black,
   'white': $color-white,
-  'c-kes-kes-light-20':	$color-summer-light-20,
-  'c-kupari-kupari-light-20': $color-copper-light-20,
-  'c-sumu-sumu-light-20': $color-fog-light-20,
-  'c-suomenlinna-suomenlinna-light-20': $color-suomenlinna-light-20,
-  'c-engel-engel-light-20': $color-engel-light-20,
-  'light-grey': #f6f6f8, // @todo
-  'dark-grey': $color-black-90,
-  'c-suomenlinna-suomenlinna': $color-suomenlinna,
-  'c-vaakuna-vaakuna': $color-coat-of-arms-blue,
-  'c-kupari-kupari': 	$color-copper,
-  'c-kes-kes': $color-summer,
-  'c-black-20': $color-black-20,
+  'black-5': $color-black-5,
+  'black-10': $color-black-10,
+  'black-20': $color-black-20,
+  'black-30': $color-black-30,
+  'black-40': $color-black-40,
+  'black-50': $color-black-50,
+  'black-60': $color-black-60,
+  'black-70': $color-black-70,
+  'black-80': $color-black-80,
+  'black-90': $color-black-90,
 );
 
 $font-sizes: (
-  small: $fontsize-body-small,
-  medium: $fontsize-body-medium,
-  large: $fontsize-body-large,
+  small: $fontsize-body-s,
+  medium: $fontsize-body-m,
+  large: $fontsize-body-l,
 );
 
 $primary-color: map-get($color-palette, 'primary');
@@ -58,3 +102,105 @@ $mq-breakpoints: (
 );
 
 $footer-koro-height: 25px;
+
+// From legacy HDS
+
+$color-background-button-primary-default: #0000bf;
+$color-background-button-primary-hover: #000098;
+$color-background-button-primary-focus: #0000bf;
+$color-background-button-primary-hover-focus: #000098;
+$color-background-button-primary-disabled: #cccccc;
+$color-background-button-secondary-default: rgba(0, 0, 0, 0);
+$color-background-button-secondary-hover: #f2f2fc;
+$color-background-button-secondary-focus: rgba(0, 0, 0, 0);
+$color-background-button-secondary-hover-focus: #f2f2fc;
+$color-background-button-secondary-disabled: rgba(0, 0, 0, 0);
+$color-background-button-supplementary-default: rgba(0, 0, 0, 0);
+$color-background-button-supplementary-hover: #f2f2fc;
+$color-background-button-supplementary-focus: rgba(0, 0, 0, 0);
+$color-background-button-supplementary-hover-focus: #f2f2fc;
+$color-background-button-supplementary-disabled: rgba(0, 0, 0, 0);
+$color-background-checkbox-unselected: rgba(0, 0, 0, 0);
+$color-background-checkbox-selected: #0000bf;
+$color-background-checkbox-hover: #000098;
+$color-background-checkbox-disabled: #e5e5e5;
+$color-background-radio-button-default: #ffffff;
+$color-background-radio-button-hover: #ffffff;
+$color-background-radio-button-focus: #ffffff;
+$color-background-radio-button-unselected-disabled: #e5e5e5;
+$color-background-radio-button-selected-disabled: #ffffff;
+$color-background-text-input-default: #ffffff;
+$color-background-text-input-disabled: #e5e5e5;
+$color-border-button-primary-default: #0000bf;
+$color-border-button-primary-hover: #000098;
+$color-border-button-primary-focus: #0000bf;
+$color-border-button-primary-hover-focus: #000098;
+$color-border-button-primary-disabled: #cccccc;
+$color-border-button-secondary-default: #0000bf;
+$color-border-button-secondary-hover: #000098;
+$color-border-button-secondary-focus: #0000bf;
+$color-border-button-secondary-hover-focus: #000098;
+$color-border-button-secondary-disabled: #808080;
+$color-border-button-supplementary-default: rgba(0, 0, 0, 0);
+$color-border-button-supplementary-hover: rgba(0, 0, 0, 0);
+$color-border-button-supplementary-focus: #0072c6;
+$color-border-button-supplementary-hover-focus: #0072c6;
+$color-border-button-supplementary-disabled: rgba(0, 0, 0, 0);
+$color-border-checkbox-selected: #0000bf;
+$color-border-checkbox-selected-hover: #000098;
+$color-border-checkbox-selected-focus: #0000bf;
+$color-border-checkbox-unselected: #808080;
+$color-border-checkbox-unselected-hover: #1a1a1a;
+$color-border-checkbox-unselected-focus: #000000;
+$color-border-checkbox-disabled: #e5e5e5;
+$color-border-radio-button-focus: #1a1a1a;
+$color-border-radio-button-selected: #0000bf;
+$color-border-radio-button-selected-hover: #000098;
+$color-border-radio-button-selected-disabled: #cccccc;
+$color-border-radio-button-unselected: #808080;
+$color-border-radio-button-unselected-hover: #1a1a1a;
+$color-border-radio-button-unselected-disabled: #e5e5e5;
+$color-border-text-input-default: #808080;
+$color-border-text-input-hover: #1a1a1a;
+$color-border-text-input-focus: #1a1a1a;
+$color-border-text-input-invalid: #b01038;
+$color-border-text-input-disabled: #e5e5e5;
+$color-focus-outline-button-primary: #0072c6;
+$color-focus-outline-button-secondary: #0072c6;
+$color-focus-outline-button-supplementary: rgba(0, 0, 0, 0);
+$color-focus-outline-checkbox-default: #0072c6;
+$color-focus-outline-radio-button-default: #0072c6;
+$color-focus-outline-text-input-default: #0072c6;
+$color-label-button-primary-default: #ffffff;
+$color-label-button-primary-hover: #ffffff;
+$color-label-button-primary-focus: #ffffff;
+$color-label-button-primary-hover-focus: #ffffff;
+$color-label-button-primary-disabled: #ffffff;
+$color-label-button-secondary-default: #0000bf;
+$color-label-button-secondary-hover: #000098;
+$color-label-button-secondary-focus: #0000bf;
+$color-label-button-secondary-hover-focus: #000098;
+$color-label-button-secondary-disabled: #999898;
+$color-label-button-supplementary-default: #0000bf;
+$color-label-button-supplementary-hover: #000098;
+$color-label-button-supplementary-focus: #0000bf;
+$color-label-button-supplementary-hover-focus: #000098;
+$color-label-button-supplementary-disabled: #999898;
+$color-label-checkbox-default: #1a1a1a;
+$color-label-checkbox-disabled: #999898;
+$color-label-radio-button-default: #1a1a1a;
+$color-label-radio-button-disabled: #999898;
+$color-label-text-input-default: #1a1a1a; // input label text color
+$color-label-text-input-invalid: #1a1a1a; // invalid input label text color
+$color-icon-checkbox-selected: #ffffff;
+$color-icon-checkbox-unselected: rgba(0, 0, 0, 0);
+$color-icon-checkbox-disabled: #ffffff;
+$color-icon-radio-button-selected: #0000bf;
+$color-icon-radio-button-unselected: rgba(0, 0, 0, 0);
+$color-icon-radio-button-hover: #000098;
+$color-icon-radio-button-disabled: #e5e5e5;
+$color-icon-text-input-invalid: #b01038;
+$color-helper-text-input-default: #666666; // input helper text color
+$color-helper-text-input-invalid: #b01038; // invalid input helper text color
+$color-input-text-input-default: #1a1a1a; // input field text color
+$color-input-text-input-disabled: #999898; // disabled input field text color
