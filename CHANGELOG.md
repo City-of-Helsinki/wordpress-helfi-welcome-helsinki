@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added support for having only one language.
 - Updated Helsinki Design System version.
 - Updated navigation styles.
 - Updated footer styles and content.

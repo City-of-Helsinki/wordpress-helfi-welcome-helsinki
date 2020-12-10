@@ -1,4 +1,4 @@
-@if ($language_navigation)
+@if ($language_navigation && sizeof($language_navigation) > 1)
   <div class="site-languages">
     <button
       class="site-languages__button"
