@@ -200,6 +200,10 @@ domReady(() => {
     label: 'Hover',
   });
   registerBlockStyle('core/media-text', {
+    name: 'hero',
+    label: 'Hero',
+  });
+  registerBlockStyle('core/media-text', {
     name: 'hover-full',
     label: 'Hover full width',
   });

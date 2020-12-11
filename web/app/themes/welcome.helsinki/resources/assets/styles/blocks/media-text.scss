@@ -148,3 +148,56 @@ $content-overlap-amount-mobile: 32;
     }
   }
 }
+
+.wp-block-media-text.is-style-hero {
+  position: relative;
+
+  .wp-block-media-text__content {
+    padding-top: 160px;
+    padding-bottom: #{160 + 50}px;
+
+    @media (max-width: $break-small) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  @if $is-frontend {
+    &::after {
+      content: "";
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 50px;
+      background-repeat: repeat-x;
+      pointer-events: none;
+      background-image: svg-load('./images/koro-pulse.svg', fill="#ffffff");
+    }
+  }
+
+  // Force specific ratio between sides on non-mobile.
+  @media (min-width: #{$break-small + 1}) {
+    grid-template-columns: 50% 50% !important;
+
+    &.has-media-on-the-right {
+      grid-template-columns: 50% 50% !important;
+    }
+  }
+
+  @media (max-width: $break-small) {
+    // Moves the content part to be always below the image on mobile regardless
+    // of direction.
+    &.has-media-on-the-right {
+      .wp-block-media-text__media {
+        grid-row: 2;
+      }
+
+      .wp-block-media-text__content {
+        grid-row: 1;
+      }
+    }
+  }
+}
