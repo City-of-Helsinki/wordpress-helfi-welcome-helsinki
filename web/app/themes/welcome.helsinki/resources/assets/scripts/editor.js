@@ -10,6 +10,7 @@ import { addFilter } from '@wordpress/hooks';
 
 import './editor/blocks/icon-and-text';
 import './editor/blocks/highlight';
+import './editor/blocks/link-list';
 
 /**
  * Forces image fill for Media & Text blocks with the hover style.

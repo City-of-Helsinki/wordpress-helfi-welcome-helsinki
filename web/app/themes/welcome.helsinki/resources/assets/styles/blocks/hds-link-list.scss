@@ -1,0 +1,74 @@
+.wp-block-hds-link-list {
+  font-size: $fontsize-heading-m;
+
+  &:not(.has-text-color) {
+    color: $color-black-90;
+  }
+
+  &.has-background, &.has-background-color {
+    padding: $spacing-l;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li + li {
+      margin-top: $spacing-s;
+    }
+  }
+
+  &__heading {
+    display: block;
+    margin-bottom: $spacing-s;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: $spacing-xs;
+  }
+
+  &__heading-input {
+    flex-grow: 1;
+  }
+
+  &__heading-input,
+  &__text-input {
+    display: block;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 1;
+    outline: none;
+    font-size: inherit;
+    background: transparent;
+    box-shadow: none;
+    color: inherit;
+
+    &:focus {
+      border: 0;
+      outline: none;
+      box-shadow: none !important;
+    }
+  }
+
+  &__url-input {
+    margin-top: $spacing-2-xs;
+    margin-left: 30px;
+  }
+
+  &__remove-button {
+    white-space: nowrap;
+  }
+}

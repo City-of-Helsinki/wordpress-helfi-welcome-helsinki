@@ -1,0 +1,19 @@
+{
+  "name": "hds/link-list",
+  "category": "sage",
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "links": {
+      "type": "string",
+      "default": "[{\"text\": \"\", \"url\": \"\", \"isExternal\": false}]"
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    }
+  }
+}
