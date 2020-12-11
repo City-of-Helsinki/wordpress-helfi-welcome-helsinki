@@ -1,8 +1,16 @@
 .content-info {
-  position: relative;
-  padding: $spacing-3-xl $spacing-m;
-  background-color: $color-black;
+  $bp: medium;
 
+  position: relative;
+  padding: $spacing-xl $spacing-xl $spacing-m $spacing-xl;
+  background-color: $color-bus;
+  color: white;
+
+  @include mq($from: $bp) {
+    padding: $spacing-m $spacing-m $spacing-2-xs $spacing-m;
+  }
+
+  // Koro effect
   &::before {
     content: ' ';
     position: absolute;
@@ -11,24 +19,13 @@
     width: 100%;
     height: $footer-koro-height;
     background-repeat: repeat-x;
-    background-image: svg-load('./images/koro-basic.svg', fill='#000000');
-  }
-
-  .widget {
-    &__title {
-      margin-bottom: 0;
-    }
+    background-image: svg-load('./images/koro-basic.svg', fill='#0000bf');
   }
 
   .footer {
     max-width: $global-width;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  hr {
-    margin-top: $spacing-2-xl;
-    margin-bottom: $spacing-m;
   }
 
   a {
@@ -39,147 +36,263 @@
     }
   }
 
-  .footer__above {
-    display: grid;
-    grid-template:
-      "logo"
-      "menu";
+  .footer__brand {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
 
-    @include mq($from: large) {
-      grid-template:
-        "logo    menu"
-        / 1fr 2fr;
+    > * {
+      flex-basis: 100%;
+      margin-bottom: $spacing-s;
     }
 
-    .footer__logo {
-      grid-area: logo;
-      margin-bottom: $spacing-xl;
-      text-align: center;
+    svg {
+      width: auto;
+      height: 40px;
+      fill: #fff;
+    }
 
-      @include mq($from: large) {
-        text-align: left;
-      }
+    .footer__name {
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-      svg {
-        width: 130px;
-        height: 60px;
-        fill: #fff;
+    @include mq($from: $bp) {
+      text-align: left;
+      flex-wrap: nowrap;
+
+      > * {
+        flex-basis: auto;
+        margin-bottom: 0;
+        &:not(:last-child) {
+          margin-right: $spacing-s;
+        }
       }
     }
   }
 
-  .footer__below {
+  .footer__menu {
+    padding-top: $spacing-l;
+    padding-bottom: $spacing-l;
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      list-style-type: none;
+      margin-top: 0;
+      margin-bottom: -$spacing-m;
+
+      > li {
+        flex-basis: 50%;
+        display: inline-block;
+        margin-bottom: $spacing-m;
+        text-align: center;
+
+        @include mq($from: $bp) {
+          flex-basis: auto;
+          text-align: left;
+
+          &:not(:last-child) {
+            margin-right: $spacing-m;
+          }
+        }
+
+        > a {
+          display: inline-block;
+          text-decoration: none;
+          color: $color-white;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        > ul > li > a {
+          display: inline-block;
+          margin-bottom: $spacing-2-xs;
+          text-decoration: none;
+          color: $color-white;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .sub-menu {
+        padding-left: 0;
+      }
+
+      @include mq($from: $bp) {
+
+        > li {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: $spacing-m;
+
+          > a {
+            text-decoration: none;
+          }
+        }
+
+        .sub-menu {
+          display: block;
+          flex-basis: 100%;
+          list-style-type: none;
+        }
+      }
+    }
+  }
+
+  .footer__contact {
     display: grid;
     grid-template:
       "social"
-      "disclaimers"
-      "contact";
+      "links";
+    padding-top: $spacing-s;
+    padding-bottom: $spacing-s;
 
-    @include mq($from: large) {
+    @include mq($from: $bp) {
       grid-template:
-        "disclaimers    social    contact"
-        / 6fr 1fr 1fr;
-    }
-
-    .footer__disclaimers {
-      grid-area: disclaimers;
-      margin-bottom: $spacing-xs;
-      color: white;
-      text-align: center;
-      line-height: 2;
-
-      @include mq($from: large) {
-        text-align: left;
-      }
+        "social   links";
     }
 
     .footer__social {
       grid-area: social;
-      margin-bottom: $spacing-xs;
       text-align: center;
-      line-height: 2;
+      margin-bottom: $spacing-xs;
+
+      @include mq($from: $bp) {
+        text-align: left;
+        margin-bottom: 0;
+      }
 
       a {
-        margin-right: $spacing-2-xs;
+        &:not(:last-child) {
+          margin-right: $spacing-s;
+        }
       }
 
       img {
         width: 30px;
         height: 30px;
       }
-
-      @include mq($from: large) {
-        text-align: right;
-      }
     }
 
-    .footer__contact {
-      grid-area: contact;
-      margin-bottom: $spacing-xs;
+    .footer__links {
+      grid-area: links;
       text-align: center;
-      line-height: 2;
 
-      @include mq($from: large) {
+      @include mq($from: $bp) {
+        text-align: right;
+      }
+
+      .widget {
+        display: block;
+
+        @include mq($from: $bp) {
+          display: inline-block;
+        }
+
+        a {
+          @include mq($from: $bp) {
+            margin-right: $spacing-s;
+          }
+        }
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        line-height: 30px;
+
+        &:hover {
+          text-decoration: underline;;
+        }
+
+        @include mq($from: $bp) {
+          display: inline-block;
+        }
+
+        &:not(:last-child) {
+          @include mq($from: $bp) {
+            margin-right: $spacing-s;
+          }
+        }
+
+        &[href="#top"] {
+          &::after {
+            position: relative;
+            top: 6px;
+            content: '';
+            display: inline-block;
+            background-color: currentColor;
+            width: $spacing-m;
+            height: $spacing-m;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: auto;
+            mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'/%3E%3Cpath fill='currentColor' d='M12 3.636L18.364 10l-1.414 1.414L13 7.464V20h-2V7.465l-3.95 3.95L5.636 10z'/%3E%3C/g%3E%3C/svg%3E");
+            margin-left: $spacing-3-xs;
+          }
+        }
+      }
+
+      @include mq($from: $bp) {
         text-align: right;
       }
     }
   }
 
-  .menu {
-    padding-left: 0;
-    list-style-type: none;
-    margin-top: 0;
-    column-count: 2;
+  .footer__fineprint {
+    display: grid;
+    grid-template:
+      "disclaimers"
+      "links";
+    padding-top: $spacing-s;
+    padding-bottom: $spacing-s;
+    font-size: $fontsize-body-s;
 
-    > li {
-      margin-bottom: $spacing-m;
+    @include mq($from: $bp) {
+      grid-template:
+        "disclaimers   links";
+      text-align: left;
+    }
 
-      > a {
-        display: inline-block;
-        margin-bottom: $spacing-2-xs;
-        text-decoration: none;
-        color: $color-white;
-        font-weight: bold;
+    .footer__disclaimers {
+      grid-area: disclaimers;
+      text-align: center;
+      margin-bottom: $spacing-xs;
 
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      > ul > li > a {
-        display: inline-block;
-        margin-bottom: $spacing-2-xs;
-        text-decoration: none;
-        color: $color-white;
-
-        &:hover {
-          text-decoration: underline;
-        }
+      @include mq($from: $bp) {
+        text-align: left;
+        margin-bottom: 0;
       }
     }
 
-    .sub-menu {
-      padding-left: 0;
-    }
+    .footer__links {
+      grid-area: links;
+      text-align: center;
 
-    @include mq($from: large) {
-      column-count: 2;
+      @include mq($from: $bp) {
+        text-align: right;
+      }
 
-      > li {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: $spacing-m;
+      a {
+        text-decoration: underline;
 
-        > a {
-          text-decoration: none;
+        &:not(:last-child) {
+          margin-right: $spacing-s;
         }
       }
-
-      .sub-menu {
-        display: block;
-        flex-basis: 100%;
-        list-style-type: none;
-      }
     }
+  }
+
+  .footer__menu + .footer__contact,
+  .footer__contact + .footer__fineprint,
+  .footer__menu + .footer__fineprint {
+    border-top: 1px solid white;
   }
 }

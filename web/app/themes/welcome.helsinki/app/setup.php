@@ -175,27 +175,29 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer'
-    ] + $config);
-
-    register_sidebar([
-        'name' => __('Footer: Contact', 'sage'),
-        'id' => 'footer-contact'
-    ] + $config);
-
-    register_sidebar([
-        'name' => __('Footer: Social', 'sage'),
-        'id' => 'footer-social'
-    ] + $config);
-
-    register_sidebar([
-        'name' => __('Footer: Disclaimers', 'sage'),
-        'id' => 'footer-disclaimers'
-    ] + $config);
-
-    register_sidebar([
         'name' => __('Footer: Menu', 'sage'),
         'id' => 'footer-menu'
     ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer: Contact / social', 'sage'),
+        'id' => 'footer-contact-social'
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer: Contact / links', 'sage'),
+        'id' => 'footer-contact-links'
+    ] + $config);
+
+
+    register_sidebar([
+        'name' => __('Footer: Fine print / disclaimers', 'sage'),
+        'id' => 'footer-fineprint-disclaimers'
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer: Fine print / links', 'sage'),
+        'id' => 'footer-fineprint-links'
+    ] + $config);
+
 });
