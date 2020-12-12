@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { __ } from '@wordpress/i18n'
 import {
   InspectorControls,
-  RichText,
   withColors,
   __experimentalPanelColorGradientSettings as PanelColorGradientSettings,
   URLInput,
@@ -58,7 +57,7 @@ function BlockEdit({
             class={classnames([
               `${CLASS_NAME}__link`,
               textColor.class,
-              textColor.class && 'has-text-color'
+              textColor.class && 'has-text-color',
             ])}
             key={index}
           >

@@ -65,6 +65,7 @@
       > * {
         flex-basis: auto;
         margin-bottom: 0;
+
         &:not(:last-child) {
           margin-right: $spacing-s;
         }
@@ -126,7 +127,6 @@
       }
 
       @include mq($from: $bp) {
-
         > li {
           display: flex;
           flex-wrap: wrap;
@@ -155,8 +155,7 @@
     padding-bottom: $spacing-s;
 
     @include mq($from: $bp) {
-      grid-template:
-        "social   links";
+      grid-template: "social   links";
     }
 
     .footer__social {
@@ -209,7 +208,7 @@
         line-height: 30px;
 
         &:hover {
-          text-decoration: underline;;
+          text-decoration: underline;
         }
 
         @include mq($from: $bp) {
@@ -256,8 +255,7 @@
     font-size: $fontsize-body-s;
 
     @include mq($from: $bp) {
-      grid-template:
-        "disclaimers   links";
+      grid-template: "disclaimers   links";
       text-align: left;
     }
 
