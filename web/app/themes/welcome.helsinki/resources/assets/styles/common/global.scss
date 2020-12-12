@@ -18,15 +18,6 @@
   }
 }
 
-/**
- * Block editor font size utilities
- */
-@each $size-name, $size-value in $font-sizes {
-  .has-#{$size-name}-font-size {
-    font-size: $size-value !important;
-  }
-}
-
 // Remove empty trailing paragraphs.
 p:empty:last-child {
   display: none;
