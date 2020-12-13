@@ -11,6 +11,7 @@
 - Updated footer styles and content.
 - Updated typography.
 - Updated Button Block styles.
+- Updated Highlight Block styles.
 - Removed automatic excerpts.
 
 ## 0.1.0
