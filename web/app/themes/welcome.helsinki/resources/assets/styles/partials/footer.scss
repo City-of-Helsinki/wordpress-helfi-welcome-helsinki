@@ -160,6 +160,8 @@
 
     .footer__social {
       grid-area: social;
+      display: flex;
+      align-items: center;
       text-align: center;
       margin-bottom: $spacing-xs;
 
@@ -168,15 +170,21 @@
         margin-bottom: 0;
       }
 
+      .textwidget {
+        display: flex;
+      }
+
       a {
+        width: 30px;
+        height: 30px;
+
+        &:hover {
+          background-color: currentColor;
+        }
+
         &:not(:last-child) {
           margin-right: $spacing-s;
         }
-      }
-
-      img {
-        width: 30px;
-        height: 30px;
       }
     }
 

@@ -16,11 +16,7 @@ import {
 const DOMAIN = 'hds'
 const CLASS_NAME = `wp-block-${DOMAIN}-icon-and-text`
 
-const ICONS = [
-  'alert-circle', 'book', 'calendar-clock', 'car', 'car-wifi', 'check',
-  'clock', 'cogwheel', 'drone', 'ed-tech', 'envelope', 'globe', 'group',
-  'heart', 'home', 'home-solar-panels', 'ship', 'speechbubble', 'tree',
-]
+import icons from '../../../icons'
 
 function BlockEdit({
   attributes,
@@ -45,7 +41,8 @@ function BlockEdit({
       <div
         className={classnames(
           `${CLASS_NAME}__icon`,
-          `has-${iconName}-icon`,
+          'hds-icon',
+          `hds-icon--${iconName}`,
           iconColor.class,
         )}
       />
@@ -91,11 +88,12 @@ function BlockEdit({
               label={__('Icon', DOMAIN)}
               selected={iconName}
               onChange={value => setAttributes({iconName: value})}
-              options={ICONS.map(name => ({
+              options={icons.map(name => ({
                 label: (
-                  <div
+                  <i
                     className={classnames(
-                      `has-${name}-icon`,
+                      'hds-icon',
+                      `hds-icon--${name}`,
                     )}
                     style={{
                       display: 'inline-block',
@@ -103,7 +101,7 @@ function BlockEdit({
                       height: '30px',
                       color: iconColor.color,
                     }}
-                    />
+                  />
                 ),
                 value: name,
               }))}

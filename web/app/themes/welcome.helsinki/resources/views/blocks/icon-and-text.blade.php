@@ -1,6 +1,6 @@
 <div class="{{ esc_attr($block->classes) }}">
     @if ($iconName)
-        <div class="wp-block-hds-icon-and-text__icon has-{!! $iconName !!}-icon has-{!! $iconColor !!}-color">
+        <div class="wp-block-hds-icon-and-text__icon hds-icon hds-icon--{!! $iconName !!} has-{!! $iconColor !!}-color">
         </div>
     @endif
     @if ($heading)

@@ -14,14 +14,10 @@ import {
   RadioControl,
 } from '@wordpress/components'
 
+import icons from '../../../icons'
+
 const DOMAIN = 'hds'
 const CLASS_NAME = `wp-block-${DOMAIN}-highlight`
-
-const ICONS = [
-  'alert-circle', 'book', 'calendar-clock', 'car', 'car-wifi', 'check',
-  'clock', 'cogwheel', 'drone', 'ed-tech', 'envelope', 'globe', 'group',
-  'heart', 'home', 'home-solar-panels', 'ship', 'speechbubble', 'tree',
-]
 
 function BlockEdit({
   attributes,
@@ -48,7 +44,8 @@ function BlockEdit({
           <div
             className={classnames(
               `${CLASS_NAME}__icon`,
-              `has-${iconName}-icon`,
+              'hds-icon',
+              `hds-icon--${iconName}`,
               iconColor.class,
             )}
           />
@@ -117,11 +114,12 @@ function BlockEdit({
               label={__('Icon', DOMAIN)}
               selected={iconName}
               onChange={value => setAttributes({iconName: value})}
-              options={ICONS.map(name => ({
+              options={icons.map(name => ({
                 label: (
                   <div
                     className={classnames(
-                      `has-${name}-icon`,
+                      'hds-icon',
+                      `hds-icon--${name}`,
                     )}
                     style={{
                       display: 'inline-block',

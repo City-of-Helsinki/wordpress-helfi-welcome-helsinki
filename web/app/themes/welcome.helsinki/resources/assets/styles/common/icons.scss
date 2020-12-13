@@ -1,18 +1,185 @@
-$icons: 'angle-down', 'alert-circle', 'book', 'calendar-clock', 'car',
-  'car-wifi', 'check', 'clock', 'cogwheel', 'drone', 'ed-tech', 'envelope',
-  'globe', 'group', 'heart', 'home', 'home-solar-panels', 'ship',
-  'speechbubble', 'tree', 'link-external', 'arrow-right';
+$customIcons:
+  'book',
+  'car',
+  'car-wifi',
+  'drone',
+  'ed-tech',
+  'home-solar-panels',
+  'ship',
+  'tree';
 
-@each $icon in $icons {
-  .has-#{$icon}-icon {
-    background-image: svg-load('./images/icons/#{$icon}.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
-    @each $color-name, $color-value in $color-palette {
-      &.has-#{$color-name}-color {
-        background-image: svg-load('./images/icons/#{$icon}.svg', fill=$color-value);
-      }
-    }
+@each $icon in $customIcons {
+  .hds-icon--#{$icon} {
+    mask-image: svg-load('./images/icons/#{$icon}.svg');
+    mask-size: contain !important;
   }
 }
+
+.hds-icon.hds-icon--size-xs {
+  width: $spacing-layout-2-xs;
+  height: $spacing-layout-2-xs;
+}
+
+.hds-icon.hds-icon--size-s {
+  width: $spacing-layout-xs;
+  height: $spacing-layout-xs;
+}
+
+.hds-icon.hds-icon--size-m {
+  width: $spacing-layout-s;
+  height: $spacing-layout-s;
+}
+
+.hds-icon.hds-icon--size-l {
+  width: $spacing-layout-m;
+  height: $spacing-layout-m;
+}
+
+.hds-icon.hds-icon--size-xl {
+  width: $spacing-layout-l;
+  height: $spacing-layout-l;
+}
+
+@import '~hds-core/lib/icons/icon';
+
+// HDS - UI
+@import '~hds-core/lib/icons/ui/icon-alert-circle-fill';
+@import '~hds-core/lib/icons/ui/icon-alert-circle';
+@import '~hds-core/lib/icons/ui/icon-angle-down';
+@import '~hds-core/lib/icons/ui/icon-angle-left';
+@import '~hds-core/lib/icons/ui/icon-angle-right';
+@import '~hds-core/lib/icons/ui/icon-angle-up';
+@import '~hds-core/lib/icons/ui/icon-arrow-down';
+@import '~hds-core/lib/icons/ui/icon-arrow-left';
+@import '~hds-core/lib/icons/ui/icon-arrow-redo';
+@import '~hds-core/lib/icons/ui/icon-arrow-right';
+@import '~hds-core/lib/icons/ui/icon-arrow-undo';
+@import '~hds-core/lib/icons/ui/icon-arrow-up';
+@import '~hds-core/lib/icons/ui/icon-bell-crossed';
+@import '~hds-core/lib/icons/ui/icon-bell';
+@import '~hds-core/lib/icons/ui/icon-cake';
+@import '~hds-core/lib/icons/ui/icon-calendar-clock';
+@import '~hds-core/lib/icons/ui/icon-calendar-cross';
+@import '~hds-core/lib/icons/ui/icon-calendar-plus';
+@import '~hds-core/lib/icons/ui/icon-calendar-recurring';
+@import '~hds-core/lib/icons/ui/icon-calendar';
+@import '~hds-core/lib/icons/ui/icon-camera';
+@import '~hds-core/lib/icons/ui/icon-check-circle-fill';
+@import '~hds-core/lib/icons/ui/icon-check-circle';
+@import '~hds-core/lib/icons/ui/icon-check';
+@import '~hds-core/lib/icons/ui/icon-clock-cross';
+@import '~hds-core/lib/icons/ui/icon-clock-plus';
+@import '~hds-core/lib/icons/ui/icon-clock';
+@import '~hds-core/lib/icons/ui/icon-cogwheel';
+@import '~hds-core/lib/icons/ui/icon-cross-circle-fill';
+@import '~hds-core/lib/icons/ui/icon-cross-circle';
+@import '~hds-core/lib/icons/ui/icon-cross';
+@import '~hds-core/lib/icons/ui/icon-display';
+@import '~hds-core/lib/icons/ui/icon-download-cloud';
+@import '~hds-core/lib/icons/ui/icon-download';
+@import '~hds-core/lib/icons/ui/icon-drag';
+@import '~hds-core/lib/icons/ui/icon-envelope';
+@import '~hds-core/lib/icons/ui/icon-error-fill';
+@import '~hds-core/lib/icons/ui/icon-error';
+@import '~hds-core/lib/icons/ui/icon-eye-crossed';
+@import '~hds-core/lib/icons/ui/icon-eye';
+@import '~hds-core/lib/icons/ui/icon-face-neutral';
+@import '~hds-core/lib/icons/ui/icon-face-sad';
+@import '~hds-core/lib/icons/ui/icon-face-smile';
+@import '~hds-core/lib/icons/ui/icon-globe';
+@import '~hds-core/lib/icons/ui/icon-glyph-at';
+@import '~hds-core/lib/icons/ui/icon-glyph-euro';
+@import '~hds-core/lib/icons/ui/icon-group';
+@import '~hds-core/lib/icons/ui/icon-heart-fill';
+@import '~hds-core/lib/icons/ui/icon-heart';
+@import '~hds-core/lib/icons/ui/icon-home-smoke';
+@import '~hds-core/lib/icons/ui/icon-home';
+@import '~hds-core/lib/icons/ui/icon-info-circle-fill';
+@import '~hds-core/lib/icons/ui/icon-info-circle';
+@import '~hds-core/lib/icons/ui/icon-layers';
+@import '~hds-core/lib/icons/ui/icon-link-external';
+@import '~hds-core/lib/icons/ui/icon-link';
+@import '~hds-core/lib/icons/ui/icon-locate';
+@import '~hds-core/lib/icons/ui/icon-location';
+@import '~hds-core/lib/icons/ui/icon-lock-open';
+@import '~hds-core/lib/icons/ui/icon-lock';
+@import '~hds-core/lib/icons/ui/icon-map';
+@import '~hds-core/lib/icons/ui/icon-menu-dots';
+@import '~hds-core/lib/icons/ui/icon-menu-hamburger';
+@import '~hds-core/lib/icons/ui/icon-microphone-crossed';
+@import '~hds-core/lib/icons/ui/icon-microphone';
+@import '~hds-core/lib/icons/ui/icon-minus-circle-fill';
+@import '~hds-core/lib/icons/ui/icon-minus-circle';
+@import '~hds-core/lib/icons/ui/icon-minus';
+@import '~hds-core/lib/icons/ui/icon-mobile';
+@import '~hds-core/lib/icons/ui/icon-paperclip';
+@import '~hds-core/lib/icons/ui/icon-pen-line';
+@import '~hds-core/lib/icons/ui/icon-pen';
+@import '~hds-core/lib/icons/ui/icon-person-female';
+@import '~hds-core/lib/icons/ui/icon-person-male';
+@import '~hds-core/lib/icons/ui/icon-person-wheelchair';
+@import '~hds-core/lib/icons/ui/icon-phone';
+@import '~hds-core/lib/icons/ui/icon-photo-plus';
+@import '~hds-core/lib/icons/ui/icon-photo';
+@import '~hds-core/lib/icons/ui/icon-playback-fastforward';
+@import '~hds-core/lib/icons/ui/icon-playback-next';
+@import '~hds-core/lib/icons/ui/icon-playback-pause';
+@import '~hds-core/lib/icons/ui/icon-playback-play';
+@import '~hds-core/lib/icons/ui/icon-playback-previous';
+@import '~hds-core/lib/icons/ui/icon-playback-record';
+@import '~hds-core/lib/icons/ui/icon-playback-rewind';
+@import '~hds-core/lib/icons/ui/icon-playback-stop';
+@import '~hds-core/lib/icons/ui/icon-plus-circle-fill';
+@import '~hds-core/lib/icons/ui/icon-plus-circle';
+@import '~hds-core/lib/icons/ui/icon-plus';
+@import '~hds-core/lib/icons/ui/icon-podcast';
+@import '~hds-core/lib/icons/ui/icon-printer';
+@import '~hds-core/lib/icons/ui/icon-question-circle-fill';
+@import '~hds-core/lib/icons/ui/icon-question-circle';
+@import '~hds-core/lib/icons/ui/icon-refresh';
+@import '~hds-core/lib/icons/ui/icon-search';
+@import '~hds-core/lib/icons/ui/icon-share';
+@import '~hds-core/lib/icons/ui/icon-signin';
+@import '~hds-core/lib/icons/ui/icon-signout';
+@import '~hds-core/lib/icons/ui/icon-sliders';
+@import '~hds-core/lib/icons/ui/icon-sort-alphabetical-ascending';
+@import '~hds-core/lib/icons/ui/icon-sort-alphabetical-descending';
+@import '~hds-core/lib/icons/ui/icon-sort-ascending';
+@import '~hds-core/lib/icons/ui/icon-sort-descending';
+@import '~hds-core/lib/icons/ui/icon-sort';
+@import '~hds-core/lib/icons/ui/icon-speechbubble-text';
+@import '~hds-core/lib/icons/ui/icon-speechbubble';
+@import '~hds-core/lib/icons/ui/icon-star-fill';
+@import '~hds-core/lib/icons/ui/icon-star';
+@import '~hds-core/lib/icons/ui/icon-ticket';
+@import '~hds-core/lib/icons/ui/icon-trash';
+@import '~hds-core/lib/icons/ui/icon-upload-cloud';
+@import '~hds-core/lib/icons/ui/icon-upload';
+@import '~hds-core/lib/icons/ui/icon-user';
+@import '~hds-core/lib/icons/ui/icon-videocamera-crossed';
+@import '~hds-core/lib/icons/ui/icon-videocamera';
+@import '~hds-core/lib/icons/ui/icon-volume-high';
+@import '~hds-core/lib/icons/ui/icon-volume-low';
+@import '~hds-core/lib/icons/ui/icon-volume-minus';
+@import '~hds-core/lib/icons/ui/icon-volume-mute';
+@import '~hds-core/lib/icons/ui/icon-volume-plus';
+@import '~hds-core/lib/icons/ui/icon-wifi-crossed';
+@import '~hds-core/lib/icons/ui/icon-wifi';
+@import '~hds-core/lib/icons/ui/icon-zoom-in';
+@import '~hds-core/lib/icons/ui/icon-zoom-out';
+@import '~hds-core/lib/icons/ui/icon-zoom-text';
+
+// HDS - some
+@import '~hds-core/lib/icons/some/icon-discord';
+@import '~hds-core/lib/icons/some/icon-facebook';
+@import '~hds-core/lib/icons/some/icon-google';
+@import '~hds-core/lib/icons/some/icon-instagram';
+@import '~hds-core/lib/icons/some/icon-linkedin';
+@import '~hds-core/lib/icons/some/icon-rss';
+@import '~hds-core/lib/icons/some/icon-snapchat';
+@import '~hds-core/lib/icons/some/icon-tiktok';
+@import '~hds-core/lib/icons/some/icon-twitch';
+@import '~hds-core/lib/icons/some/icon-twitter';
+@import '~hds-core/lib/icons/some/icon-vimeo';
+@import '~hds-core/lib/icons/some/icon-yle';
+@import '~hds-core/lib/icons/some/icon-youtube';

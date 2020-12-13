@@ -7,7 +7,7 @@
       aria-expanded="false"
     >
       {{ $language_code }}
-      <span class="site-languages__trigger has-angle-down-icon" aria-hidden="true"></span>
+      <span class="site-languages__trigger hds-icon hds-icon--angle-down" aria-hidden="true"></span>
     </button>
     <ul
       class="site-languages__menu"

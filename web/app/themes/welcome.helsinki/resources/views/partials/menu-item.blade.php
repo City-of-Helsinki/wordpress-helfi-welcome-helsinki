@@ -20,7 +20,7 @@
     {!! esc_html($item->label) !!}
 
     @if ($item->children)
-      <span class="{{ $name }}__submenu-trigger has-angle-down-icon" aria-hidden="true"></span>
+      <span class="{{ $name }}__submenu-trigger hds-icon hds-icon--angle-down" aria-hidden="true"></span>
     @endif
   </a>
 

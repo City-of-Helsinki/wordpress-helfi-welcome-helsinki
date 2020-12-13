@@ -64,7 +64,8 @@ function BlockEdit({
             <div
               className={classnames([
                 `${CLASS_NAME}__icon`,
-                link.isExternal ? 'has-link-external-icon' : 'has-arrow-right-icon',
+                'hds-icon',
+                link.isExternal ? 'hds-icon--link-external' : 'hds-icon--arrow-right',
               ])}
               onClick={() => {
                 link.isExternal = !link.isExternal

@@ -17,10 +17,11 @@
           >
             <div class="
               wp-block-hds-link-list__icon
+              hds-icon
               @if ($link->isExternal)
-                has-link-external-icon
+                hds-icon--link-external
               @else
-                has-arrow-right-icon
+                hds-icon--arrow-right
               @endif
             "></div>
             {!! wp_kses_post($link->text) !!}

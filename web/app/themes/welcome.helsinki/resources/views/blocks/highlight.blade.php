@@ -2,7 +2,7 @@
     <div class="wp-block-hds-highlight__columns">
         <div class="wp-block-hds-highlight__column icon-column">
             @if ($iconName)
-                <div class="wp-block-hds-highlight__icon has-{!! $iconName !!}-icon has-{!! $iconColor !!}-color">
+                <div class="wp-block-hds-highlight__icon hds-icon hds-icon--{!! $iconName !!} has-{!! $iconColor !!}-color">
                 </div>
             @endif
         </div>
