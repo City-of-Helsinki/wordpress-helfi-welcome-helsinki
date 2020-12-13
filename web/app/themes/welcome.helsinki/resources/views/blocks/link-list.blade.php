@@ -1,4 +1,4 @@
-<div class="{{ esc_attr($block->classes) }}">
+<div class="{{ esc_attr($block->classes) }} @if ($compact) compact @endif">
   @if ($heading)
     <h2 class="wp-block-hds-link-list__heading has-{!! $textColor !!}-color">
       {!! wp_kses_post($heading) !!}

@@ -9,6 +9,9 @@ import {
 } from '@wordpress/block-editor'
 import {
   Button,
+  CheckboxControl,
+  PanelBody,
+  PanelRow,
 } from '@wordpress/components'
 
 const DOMAIN = 'hds'
@@ -22,7 +25,7 @@ function BlockEdit({
   backgroundColor,
   setBackgroundColor,
 }) {
-  const { heading, links: linksStr } = attributes
+  const { compact = false, heading, links: linksStr } = attributes
 
   let links
   try {
@@ -40,6 +43,7 @@ function BlockEdit({
         !!backgroundColor.class && 'has-background-color',
         textColor.class,
         !!textColor && 'has-text-color',
+        compact && 'compact'
       )}
     >
       <h2 className={`${CLASS_NAME}__heading`}>
@@ -121,6 +125,15 @@ function BlockEdit({
         </Button>
       </div>
       <InspectorControls>
+        <PanelBody>
+          <PanelRow>
+            <CheckboxControl
+              label={__('Small font', DOMAIN)}
+              value={compact}
+              onChange={compact => setAttributes({compact})}
+            />
+          </PanelRow>
+        </PanelBody>
         <PanelColorGradientSettings
           title={ __( 'Colors' ) }
           settings={[

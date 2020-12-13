@@ -1,6 +1,10 @@
 .wp-block-hds-link-list {
   font-size: $fontsize-heading-m;
 
+  &.compact {
+    font-size: $fontsize-heading-xs;
+  }
+
   &:not(.has-text-color) {
     color: $color-black-90;
   }
@@ -34,6 +38,8 @@
   }
 
   &__icon {
+    flex-grow: 0;
+    flex-shrink: 0;
     display: inline-block;
     width: 18px;
     height: 18px;

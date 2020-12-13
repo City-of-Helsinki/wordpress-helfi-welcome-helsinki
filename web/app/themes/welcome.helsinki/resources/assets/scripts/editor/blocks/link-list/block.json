@@ -14,6 +14,9 @@
     },
     "backgroundColor": {
       "type": "string"
+    },
+    "compact": {
+      "type": "boolean"
     }
   }
 }

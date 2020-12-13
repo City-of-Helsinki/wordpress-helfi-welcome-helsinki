@@ -15,6 +15,7 @@ class LinkList extends NativeBlock
             'links' => json_decode($this->attributes->links),
             'backgroundColor' => $this->attributes->backgroundColor,
             'textColor' => $this->attributes->textColor,
+            'compact' => $this->attributes->compact,
         ];
     }
 }
