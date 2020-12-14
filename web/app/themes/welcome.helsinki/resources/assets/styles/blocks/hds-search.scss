@@ -1,0 +1,27 @@
+.wp-block-hds-search {
+  &__heading {
+    margin-bottom: $spacing-s;
+    font-size: $fontsize-heading-m;
+    font-weight: bold;
+  }
+
+  form {
+    display: block;
+    position: relative;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: $spacing-2-xl;
+  }
+}
