@@ -5,6 +5,7 @@ export default [
   'car-wifi',
   'drone',
   'ed-tech',
+  'equality',
   'home-solar-panels',
   'ship',
   'tree',
