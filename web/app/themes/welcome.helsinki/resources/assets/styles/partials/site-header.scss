@@ -17,6 +17,10 @@
     max-width: $global-width;
   }
 
+  @include mq($from: 1500px) {
+    max-width: 1400px;
+  }
+
   &__logo {
     margin-right: $spacing-m;
     // Offset so the text within the logo is vertically centered

@@ -11,6 +11,10 @@
     max-width: var(--container-width);
   }
 
+  @include mq($from: 1500px) {
+    max-width: 1400px;
+  }
+
   @include ie11 {
     max-width: $global-width;
   }
@@ -36,7 +40,7 @@
 
     // Make space for trigger
     .has-children > & {
-      padding-right: ($spacing-m + $spacing-s);
+      padding-right: $spacing-s;
     }
   }
 
@@ -57,6 +61,7 @@
   }
 
   &__submenu {
+    z-index: 1;
     max-height: 0;
     overflow-y: hidden;
     padding-left: $spacing-m;
@@ -78,6 +83,7 @@
 @include mq($from: large) {
   .site-navigation {
     flex-direction: row;
+    flex-wrap: wrap;
 
     &__item {
       position: relative;
@@ -88,7 +94,7 @@
 
       // Items are horizontal
       &:not(:last-child) {
-        margin-right: $spacing-s;
+        margin-right: $spacing-l;
       }
 
       .is-level-2 {
@@ -99,8 +105,8 @@
 
     &__link {
       display: inline-block;
-      padding-left: $spacing-3-xs;
-      padding-right: $spacing-3-xs;
+      padding-left: 0;
+      padding-right: 0;
 
       // A bottom border bar shown on hover and active state
       &::after {
@@ -136,8 +142,6 @@
       box-sizing: border-box;
       background-size: contain;
       height: $spacing-m;
-      // Make it fit into the padding space of the link
-      margin-left: $spacing-2-xs;
       right: auto;
     }
 
