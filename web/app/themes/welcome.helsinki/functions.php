@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Only return posts in searches.
+ */
+function mySearchFilter ($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+add_filter('pre_get_posts','mySearchFilter');
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
