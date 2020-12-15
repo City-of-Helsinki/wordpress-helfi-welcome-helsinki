@@ -17,6 +17,11 @@
       </div>
       <figure class="wp-block-image alignfull size-large wp-block-image--featured">
         @php(the_post_thumbnail('large', ['sizes' => '100vw']))
+        @if (get_field('featured_image_caption'))
+          <figcaption style="text-align: center;">
+            {{ get_field('featured_image_caption') }}
+          </figcaption>
+        @endif
       </figure>
     @endif
 
