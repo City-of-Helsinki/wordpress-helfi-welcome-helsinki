@@ -7,6 +7,7 @@
 - Added Hero style for Media & Text Block.
 - Added more icons and changed icons to come from HDS.
 - Added Search Block.
+- Added captions for post featured images.
 - Updated Helsinki Design System version.
 - Updated navigation styles.
 - Updated footer styles and content.
