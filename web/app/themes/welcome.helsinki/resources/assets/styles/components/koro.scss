@@ -29,7 +29,7 @@
     height: $pulseKoroHeight;
 
     &.bottom {
-      top: -#{$pulseKoroHeight + 1px};
+      top: -#{$pulseKoroHeight - 1px};
     }
 
     @each $color-name, $color-value in $color-palette {
