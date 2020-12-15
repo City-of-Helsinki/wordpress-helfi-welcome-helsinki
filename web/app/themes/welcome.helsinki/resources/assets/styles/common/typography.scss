@@ -68,19 +68,7 @@ p {
   line-height: $lineheight-l;
 
   &.description {
-    // Does not correspond to any HDS size.
-    font-size: 22px;
     font-weight: bold;
-    color: $color-black-90;
-    margin-block-end: $spacing-3-xl;
-
-    .post.type-post {
-      margin-block-end: $spacing-2-xl;
-    }
-
-    .post.type-page {
-      margin-block-end: $spacing-3-xl;
-    }
 
     &--light {
       font-weight: normal;

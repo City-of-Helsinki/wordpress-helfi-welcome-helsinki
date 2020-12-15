@@ -1,40 +1,49 @@
 <article @php(post_class())>
   @if ($printPageHeading)
     <header class="entry-header">
-      @if (function_exists('yoast_breadcrumb'))
-        {{ yoast_breadcrumb( '<p id="breadcrumbs">','</p>' ) }}
-      @endif
-
-      <h1 class="entry-title">
-        @php(the_title())
-      </h1>
-
-      @include('partials/entry-meta')
+      <x-group align="full" background="tram-medium-light">
+        @if (function_exists('yoast_breadcrumb'))
+          {{ yoast_breadcrumb( '<p id="breadcrumbs" class="alignwide">','</p>' ) }}
+        @endif
+        <div class="wp-block-columns alignwide">
+          <div class="wp-block-column is-vertically-aligned-center title-column">
+            <h1 class="entry-title">
+              @php(the_title())
+            </h1>
+          </div>
+          <div class="koro koro--pulse white bottom mobile-koro">
+          </div>
+          <div class="wp-block-column is-vertically-aligned-center image-column">
+            @if (get_the_post_thumbnail_url())
+              <figure class="wp-block-image size-large">
+                @php(the_post_thumbnail('large', ['sizes' => '100vw']))
+                @if (get_field('featured_image_caption'))
+                  <figcaption>
+                    {{ get_field('featured_image_caption') }}
+                  </figcaption>
+                @endif
+              </figure>
+            @endif
+          </div>
+        </div>
+      </x-group>
+      <div class="koro koro--pulse white bottom desktop-koro">
+      </div>
     </header>
   @endif
 
   <div class="entry-content">
-    @if (get_the_post_thumbnail_url())
-    <div class="koro koro--basic white top">
-      </div>
-      <figure class="wp-block-image alignfull size-large wp-block-image--featured">
-        @php(the_post_thumbnail('large', ['sizes' => '100vw']))
-        @if (get_field('featured_image_caption'))
-          <figcaption style="text-align: center;">
-            {{ get_field('featured_image_caption') }}
-          </figcaption>
-        @endif
-      </figure>
-    @endif
+    <x-group align="wide">
+      @include('partials/entry-meta')
 
-    @if (get_the_excerpt())
-      <p class="description">
-        {{ get_the_excerpt() }}
-      </p>
-    @endif
+      @if (get_the_excerpt())
+        <p class="description">
+          {{ get_the_excerpt() }}
+        </p>
+      @endif
 
-    @php(the_content())
-
+      @php(the_content())
+    </x-group>
   </div>
 
   <x-related-content

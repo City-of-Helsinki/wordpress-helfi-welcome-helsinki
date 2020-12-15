@@ -1,39 +1,50 @@
 <article @php(post_class())>
   @if ($printPageHeading)
-    @include('partials.page-header')
+    <header class="entry-header">
+      <x-group align="full" background="tram-medium-light">
+        @if (function_exists('yoast_breadcrumb'))
+          {{ yoast_breadcrumb( '<p id="breadcrumbs" class="alignwide">','</p>' ) }}
+        @endif
+        <div class="wp-block-columns alignwide">
+          <div class="wp-block-column is-vertically-aligned-center title-column">
+            <h1 class="entry-title">
+              @php(the_title())
+            </h1>
+          </div>
+          <div class="koro koro--pulse white bottom mobile-koro">
+          </div>
+          <div class="wp-block-column is-vertically-aligned-center image-column">
+            @if (get_the_post_thumbnail_url())
+              <figure class="wp-block-image size-large">
+                @php(the_post_thumbnail('large', ['sizes' => '100vw']))
+                @if (get_field('featured_image_caption'))
+                  <figcaption>
+                    {{ get_field('featured_image_caption') }}
+                  </figcaption>
+                @endif
+              </figure>
+            @endif
+          </div>
+        </div>
+      </x-group>
+      <div class="koro koro--pulse white bottom desktop-koro">
+      </div>
+    </header>
   @endif
 
   <div class="entry-content">
-    @if (!is_front_page() && get_the_excerpt())
+    @if (is_front_page())
+      @php(the_content())
+    @else
       <x-group align="wide">
-        <p class="description description--light">
-          {{ get_the_excerpt() }}
-        </p>
-      </x-group>
-    @endif
-
-    @if (get_the_post_thumbnail_url())
-      <div class="koro koro--basic white top">
-      </div>
-      <figure class="wp-block-image alignfull size-large wp-block-image--featured">
-        @php(the_post_thumbnail('large', ['sizes' => '100vw']))
-        @if (get_field('featured_image_caption'))
-          <figcaption style="text-align: center;">
-            {{ get_field('featured_image_caption') }}
-          </figcaption>
+        @if (get_the_excerpt())
+          <p class="description">
+            {{ get_the_excerpt() }}
+          </p>
         @endif
-      </figure>
-    @endif
-
-    @if (is_front_page() && get_the_excerpt())
-      <x-group align="wide">
-        <p class="description">
-          {{ get_the_excerpt() }}
-        </p>
+        @php(the_content())
       </x-group>
     @endif
-
-    @php(the_content())
   </div>
 
   <footer>
