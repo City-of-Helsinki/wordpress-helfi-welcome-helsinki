@@ -14,17 +14,6 @@
           @endwhile
           @php(wp_reset_postdata())
         </div>
-
-        @if (count($category) === 1)
-          <div class="wp-block-buttons aligncenter related-content__read-more-button">
-            <div class="wp-block-button is-style-outline">
-              <a class="wp-block-button__link" href="{{ get_category_link($category[0]) }}">
-                {{ __('More related content', 'sage')}}
-              </a>
-            </div>
-          </div>
-        </div>
-        @endif
     </div>
   </div>
 @endif
