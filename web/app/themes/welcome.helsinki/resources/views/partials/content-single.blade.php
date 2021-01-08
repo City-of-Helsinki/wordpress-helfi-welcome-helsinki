@@ -32,18 +32,21 @@
     </header>
   @endif
 
-  <div class="entry-content">
-    <x-group align="wide">
+  <div class="entry-content-and-sidebar">
+    <div class="entry-content">
+      <x-group align="wide">
+        @if (get_the_excerpt())
+          <p class="description">
+            {{ get_the_excerpt() }}
+          </p>
+        @endif
+
+        @php(the_content())
+      </x-group>
+    </div>
+    <div class="entry-sidebar">
       @include('partials/entry-meta')
-
-      @if (get_the_excerpt())
-        <p class="description">
-          {{ get_the_excerpt() }}
-        </p>
-      @endif
-
-      @php(the_content())
-    </x-group>
+    </div>
   </div>
 
   <x-related-content

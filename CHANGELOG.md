@@ -9,6 +9,7 @@
 - Added Search Block.
 - Added captions for page and post featured images.
 - Added new header for posts and pages.
+- Added sidebar to posts.
 - Updated Helsinki Design System version.
 - Updated navigation styles.
 - Updated footer styles and content.

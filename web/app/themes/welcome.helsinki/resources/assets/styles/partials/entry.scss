@@ -172,6 +172,31 @@
   }
 }
 
+.entry-content-and-sidebar {
+  .entry-sidebar .entry-meta {
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq($from: medium) {
+    display: flex;
+    max-width: var(--alignwide-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    .entry-content {
+      width: 75%;
+      padding-right: $spacing-m;
+    }
+
+    .entry-sidebar {
+      width: 25%;
+      max-width: none;
+    }
+  }
+}
+
 .entry-title {
   margin-bottom: $spacing-l;
 }
@@ -190,5 +215,10 @@
 
   .byline {
     margin-left: $spacing-m;
+  }
+
+  time.updated {
+    font-size: $fontsize-heading-m;
+    font-weight: bold;
   }
 }
