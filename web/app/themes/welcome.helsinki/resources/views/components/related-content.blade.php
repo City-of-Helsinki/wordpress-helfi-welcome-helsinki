@@ -8,8 +8,8 @@
 
         <div class="grid">
           @while ($query->have_posts()) @php($query->the_post())
-          <div class="cell xsmall:4 small:2 medium:4 large:3">
-            @includeFirst(['teasers.' . get_post_type(), 'teasers.teaser'], ['post' => get_post()])
+          <div class="cell xsmall:6 small:6 medium:8 large:6">
+            @includeFirst(['teasers.' . get_post_type(), 'teasers.teaser'], ['post' => get_post(), 'largethumbnail' => 'qetqte'])
           </div>
           @endwhile
           @php(wp_reset_postdata())

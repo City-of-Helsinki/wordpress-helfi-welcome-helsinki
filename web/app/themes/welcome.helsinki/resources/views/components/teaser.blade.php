@@ -13,7 +13,7 @@
       </div>
     @endif
     @if ($thumbnail)
-      <div class="teaser__thumbnail">
+      <div class="teaser__thumbnail {{ $large_thumbnail ? 'teaser__thumbnail--large' : '' }}">
         {!! $thumbnail !!}
       </div>
     @else

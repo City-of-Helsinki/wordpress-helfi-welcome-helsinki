@@ -16,6 +16,7 @@
 - Updated typography.
 - Updated Button Block styles.
 - Updated Highlight Block styles.
+- Updated related content and teaser styles.
 - Removed automatic excerpts.
 
 ## 0.1.0
