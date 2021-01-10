@@ -30,13 +30,8 @@
       @endif
     </div>
   </a>
-  @if ($tags || $categories)
+  @if ($tags)
   <ul class="teaser__tags">
-    @foreach ($categories as $category)
-    <li>
-        <a href={!! get_category_link($category) !!}>{!! $category->name !!}</a>
-    </li>
-    @endforeach
     @if ($tags)
       @foreach ($tags as $tag)
         <li>
