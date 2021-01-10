@@ -7,6 +7,7 @@
 - Added Hero style for Media & Text Block.
 - Added more icons and changed icons to come from HDS.
 - Added Search Block.
+- Added React & Share Block.
 - Added captions for page and post featured images.
 - Added new header for posts and pages.
 - Added sidebar to posts.

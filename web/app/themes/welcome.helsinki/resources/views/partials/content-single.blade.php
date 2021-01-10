@@ -42,6 +42,8 @@
         @endif
 
         @php(the_content())
+
+        @include('partials/react-and-share')
       </x-group>
     </div>
     <div class="entry-sidebar">
