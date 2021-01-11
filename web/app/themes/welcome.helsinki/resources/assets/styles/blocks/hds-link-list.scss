@@ -35,6 +35,11 @@
     text-decoration: none;
     font-weight: bold;
     color: inherit;
+
+    &:hover {
+      background-color: unset;
+      text-decoration: underline;
+    }
   }
 
   &__icon {
