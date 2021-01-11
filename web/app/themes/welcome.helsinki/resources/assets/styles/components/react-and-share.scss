@@ -6,15 +6,21 @@
     text-align: center;
   }
 
-  .rns-reaction-button {
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+  .rns-reaction {
+    .rns-reaction-button {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
 
-    .rns-label {
-      color: $color-bus !important;
-      font-weight: bold !important;
-      font-family: $font-default;
-      font-size: $fontsize-body-xl;
+      .rns-label {
+        color: $color-bus !important;
+        font-weight: bold !important;
+        font-family: $font-default;
+        font-size: $fontsize-body-xl;
+      }
+    }
+
+    &.selected .rns-reaction-button .rns-label {
+      color: white !important;
     }
   }
 }
