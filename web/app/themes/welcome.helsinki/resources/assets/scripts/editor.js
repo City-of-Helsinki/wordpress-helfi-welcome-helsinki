@@ -189,6 +189,16 @@ domReady(() => {
     label: 'Outline',
     isDefault: true,
   });
+  registerBlockStyle('core/paragraph', {
+    name: 'default',
+    label: 'Default',
+    isDefault: true,
+  });
+  registerBlockStyle('core/paragraph', {
+    name: 'tip',
+    label: 'Tip',
+    isDefault: false,
+  });
 
   registerBlockStyle('core/media-text', {
     name: 'default',
