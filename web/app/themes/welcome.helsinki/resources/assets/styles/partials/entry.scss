@@ -208,9 +208,6 @@
 
 .entry-meta {
   text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   margin-bottom: $spacing-m;
 
   .byline {
@@ -220,5 +217,27 @@
   time.updated {
     font-size: $fontsize-heading-m;
     font-weight: bold;
+  }
+
+  .tags {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+
+    li {
+      display: inline-block;
+      margin-right: $spacing-2-xs;
+      margin-bottom: $spacing-2-xs;
+      background-color: $color-bus-light;
+      border-radius: 40px;
+      padding: $spacing-2-xs $spacing-s;
+
+      a {
+        text-decoration: none;
+        color: $color-bus;
+        font-weight: bold;
+      }
+    }
   }
 }
