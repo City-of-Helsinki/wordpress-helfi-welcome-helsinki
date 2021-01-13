@@ -49,6 +49,16 @@
     width: 18px;
     height: 18px;
     margin-right: $spacing-xs;
+    transform: translateX(0px) translateY(0px);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &__link:hover &__icon--internal {
+    transform: translateX(5px);
+  }
+
+  &__link:hover &__icon--external {
+    transform: translateY(-5px);
   }
 
   &__heading-input {

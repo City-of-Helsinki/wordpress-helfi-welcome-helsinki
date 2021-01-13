@@ -20,8 +20,10 @@
               hds-icon
               @if ($link->isExternal)
                 hds-icon--link-external
+                wp-block-hds-link-list__icon--external
               @else
                 hds-icon--arrow-right
+                wp-block-hds-link-list__icon--internal
               @endif
             "></div>
             {!! wp_kses_post($link->text) !!}
