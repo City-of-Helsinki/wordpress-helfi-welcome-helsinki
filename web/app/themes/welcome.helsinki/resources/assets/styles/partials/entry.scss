@@ -215,6 +215,8 @@
   }
 
   time.updated {
+    display: block;
+    margin-bottom: $spacing-s;
     font-size: $fontsize-heading-m;
     font-weight: bold;
   }
@@ -222,7 +224,8 @@
   .tags {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: $spacing-l;
     margin-left: 0;
 
     li {
@@ -237,6 +240,50 @@
         text-decoration: none;
         color: $color-bus;
         font-weight: bold;
+      }
+    }
+  }
+
+  .share {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-left: 0;
+
+    li {
+      display: inline-block;
+      margin-right: $spacing-s;
+      margin-bottom: $spacing-2-xs;
+      white-space: nowrap;
+      line-height: 40px;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: $fontsize-body-l;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          background: none;
+        }
+      }
+
+      .icon {
+        margin-right: $spacing-2-xs;
+        border-radius: 50%;
+        border: 2px solid black;
+        width: 40px;
+        height: 40px;
+        padding: 7.5px;
+      }
+
+      .text {
+        text-decoration: underline;
+      }
+
+      a:hover .text {
+        background-color: #f2f2fc;
       }
     }
   }

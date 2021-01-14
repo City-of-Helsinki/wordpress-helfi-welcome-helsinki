@@ -13,10 +13,34 @@
   </ul>
   @endif
 
-  <!-- <p class="byline author vcard">
-    <span>{{ __('By', 'sage') }}</span>
-    <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn">
-      {{ get_the_author() }}
-    </a>
-  </p> -->
+  <h3>{{ __('Share post', 'hds') }}</h3>
+
+  <ul class="share">
+    <li>
+      <a
+        class="share-button share-button--facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(get_permalink()) }}"
+        target="_blank"
+        title="{{ __('Share on Facebook', 'gds') }}"
+        rel="nofollow"
+      >
+        <img class="icon" src="{{ \Roots\Asset('images/fontawesome/facebook-f-brands.svg') }}" />
+        <span class="text">Facebook</span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://twitter.com/intent/tweet?text={{ urlencode(sprintf('%s %s', get_the_title(), get_permalink())) }}"
+        target="_blank"
+        title="{{ __('Share on Twitter', 'hds') }}"
+        aria-label="{{ __('Share on Twitter', 'hds') }}"
+        role="button"
+        rel="nofollow"
+      >
+        <img class="icon" src="{{ \Roots\Asset('images/fontawesome/twitter-brands.svg') }}" />
+        <span class="text">Twitter</span>
+      </a>
+    </li>
+  </div>
+
 </div>
