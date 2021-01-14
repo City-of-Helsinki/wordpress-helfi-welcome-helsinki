@@ -14,6 +14,7 @@
           @endwhile
           @php(wp_reset_postdata())
         </div>
+      </div>
     </div>
   </div>
 @endif
