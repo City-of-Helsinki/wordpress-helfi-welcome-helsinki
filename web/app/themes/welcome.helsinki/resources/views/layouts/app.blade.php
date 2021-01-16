@@ -11,4 +11,6 @@
   <footer class="site__footer">
     @include('partials.footer')
   </footer>
+
+  @include('components.chat')
 </div>

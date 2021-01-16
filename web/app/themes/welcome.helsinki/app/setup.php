@@ -26,7 +26,9 @@ add_action('wp_enqueue_scripts', function () {
     }
 
     wp_enqueue_style('sage/app.css', asset('styles/app.css')->uri(), ['wp-block-library'], null);
-    wp_enqueue_style('sage/vue.css', asset('styles/vue.css')->uri(), ['sage/app.css'], null);
+
+    wp_enqueue_script('chat.js', asset('chat/chat.js')->uri(), ['jquery'], null, true);
+    wp_enqueue_style('chat.css', asset('chat/chat.css')->uri(), [], null);
 
     wp_localize_script('sage/app.js', 'Sage', [
         'locale' => get_locale(),
