@@ -7,7 +7,7 @@ p.is-style-info {
   position: relative;
   padding: 20px 40px 20px 56px;
 
-  &:before {
+  &::before {
     content: '';
     display: block;
     position: absolute;
