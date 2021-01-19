@@ -199,6 +199,11 @@ domReady(() => {
     label: 'Tip',
     isDefault: false,
   });
+  registerBlockStyle('core/paragraph', {
+    name: 'info',
+    label: 'Info',
+    isDefault: false,
+  });
 
   registerBlockStyle('core/media-text', {
     name: 'default',
