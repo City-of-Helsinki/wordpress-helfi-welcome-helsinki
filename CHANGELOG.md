@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Added support for having only one language.
+- Added Link Block.
 - Added Link List Block.
 - Added Hero style for Media & Text Block.
 - Added more icons and changed icons to come from HDS.

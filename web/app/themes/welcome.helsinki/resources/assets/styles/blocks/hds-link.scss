@@ -1,0 +1,78 @@
+.hds-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+  font-size: $fontsize-heading-m;
+  line-height: 1;
+
+  &:hover {
+    background-color: unset;
+    text-decoration: underline;
+  }
+
+  &.compact {
+    font-size: $fontsize-heading-xs;
+  }
+
+  &__icon {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: $spacing-xs;
+    transform: translateX(0) translateY(0);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover &__icon--internal {
+    transform: translateX(5px);
+  }
+
+  &:hover &__icon--external {
+    transform: translateY(-5px);
+  }
+
+  &__text-input {
+    display: block;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 1;
+    outline: none;
+    font-size: inherit;
+    background: transparent;
+    box-shadow: none;
+    color: inherit;
+
+    &:focus {
+      border: 0;
+      outline: none;
+      box-shadow: none !important;
+    }
+  }
+
+  &__url-input {
+    display: block;
+    margin-top: $spacing-2-xs;
+    margin-left: 30px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $spacing-s;
+  }
+
+  & + & {
+    margin-top: $spacing-s;
+  }
+
+  h2 + & {
+    margin-top: $spacing-s;
+  }
+
+  p + & {
+    margin-top: $spacing-m;
+  }
+}
