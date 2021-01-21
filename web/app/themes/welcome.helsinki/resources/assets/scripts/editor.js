@@ -229,6 +229,10 @@ domReady(() => {
     label: 'Default',
   })
   registerBlockStyle('core/group', {
+    name: 'box',
+    label: 'Box',
+  })
+  registerBlockStyle('core/group', {
     name: 'koro-top-basic',
     label: 'Basic koro top',
   })
