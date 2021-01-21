@@ -17,6 +17,16 @@ h6 {
       margin-bottom: 0.5rem;
     }
   }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      background-color: unset;
+    }
+  }
 }
 
 h1 {
