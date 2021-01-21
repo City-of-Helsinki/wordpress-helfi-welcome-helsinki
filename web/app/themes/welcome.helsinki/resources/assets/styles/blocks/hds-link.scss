@@ -61,7 +61,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: $spacing-s;
+    margin-bottom: $spacing-m;
   }
 
   & + & {
@@ -69,7 +69,7 @@
   }
 
   h2 + & {
-    margin-top: $spacing-s;
+    margin-top: $spacing-m;
   }
 
   p + & {
