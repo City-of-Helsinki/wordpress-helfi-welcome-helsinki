@@ -58,7 +58,7 @@ function BlockEdit({
       {links.map((link, index) => (
         <>
           <a
-            class={classnames([
+            className={classnames([
               `${CLASS_NAME}__link`,
               textColor.class,
               textColor.class && 'has-text-color',
@@ -158,7 +158,7 @@ function BlockEdit({
     setAttributes({links: JSON.stringify(links)})
   }
 }
-BlockEdit.displayName = 'IconAndTextBlockEdit'
+BlockEdit.displayName = 'LinkListBlockEdit'
 BlockEdit.propTypes = {
   attributes: PropTypes.shape({
     iconName: PropTypes.string,
