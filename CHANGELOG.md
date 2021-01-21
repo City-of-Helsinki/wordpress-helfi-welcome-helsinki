@@ -5,6 +5,7 @@
 - Added support for having only one language.
 - Added Link Block.
 - Added Link List Block.
+- Added Content Toggle Block.
 - Added Hero style for Media & Text Block.
 - Added more icons and changed icons to come from HDS.
 - Added Search Block.

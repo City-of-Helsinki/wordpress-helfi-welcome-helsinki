@@ -1,0 +1,9 @@
+{
+  "name": "hds/content-toggle",
+  "category": "sage",
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

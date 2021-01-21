@@ -1,0 +1,30 @@
+.wp-block-hds-content-toggle {
+  padding: $spacing-l $spacing-m $spacing-l $spacing-m;
+  background-color: $color-summer-medium-light;
+
+  &__toggle {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__text {
+    position: relative;
+    flex-grow: 1;
+    font-size: $fontsize-body-xl;
+    font-weight: bold;
+  }
+
+  &__icon {
+    align-self: center;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__content {
+    // display: none;
+    margin-top: $spacing-l;
+  }
+}
