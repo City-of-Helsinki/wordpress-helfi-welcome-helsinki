@@ -1,10 +1,14 @@
 .wp-block-hds-content-toggle {
-  padding: $spacing-l $spacing-m $spacing-l $spacing-m;
+  padding-left: $spacing-m;
+  padding-right: $spacing-m;
   background-color: $color-summer-medium-light;
 
   &__toggle {
     display: flex;
     flex-wrap: nowrap;
+    padding-top: $spacing-l;
+    padding-bottom: $spacing-l;
+    cursor: pointer;
   }
 
   &__text {
@@ -23,8 +27,16 @@
     height: 24px;
   }
 
+  &__toggle[aria-expanded="true"] &__icon {
+    transform: rotate(180deg);
+  }
+
   &__content {
-    // display: none;
-    margin-top: $spacing-l;
+    display: none;
+    padding-bottom: $spacing-l;
+
+    [aria-expanded="true"] + & {
+      display: block;
+    }
   }
 }

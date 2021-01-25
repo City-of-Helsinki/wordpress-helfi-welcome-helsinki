@@ -1,5 +1,5 @@
 <div class="{{ esc_attr($block->classes) }}">
-  <div class="wp-block-hds-content-toggle__toggle">
+  <div class="wp-block-hds-content-toggle__toggle content-toggle">
     <div class="wp-block-hds-content-toggle__text">
       {{ $text }}
     </div>

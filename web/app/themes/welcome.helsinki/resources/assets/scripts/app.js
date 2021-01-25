@@ -3,6 +3,8 @@ import debounce from 'lodash-es/debounce';
 import { menu, button } from './components/dropdown';
 import { toggle, toggler } from './components/toggler';
 
+document.querySelectorAll('.content-toggle').forEach(toggler);
+
 if (matchMedia('(min-width: 1024px)').matches) {
   if (document.querySelector('.site-navigation')) {
     menu(document.querySelector('.site-navigation'));
