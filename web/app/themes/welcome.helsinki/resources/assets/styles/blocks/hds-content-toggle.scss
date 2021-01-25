@@ -32,7 +32,10 @@
   }
 
   &__content {
-    display: none;
+    @if $is-frontend {
+      display: none;
+    }
+
     padding-bottom: $spacing-l;
 
     [aria-expanded="true"] + & {
