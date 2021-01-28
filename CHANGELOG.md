@@ -16,6 +16,7 @@
 - Added sidebar to posts.
 - Added sharing options for posts.
 - Added chat popup.
+- Restored pages to search results.
 - Updated Helsinki Design System version.
 - Updated navigation styles.
 - Updated footer styles and content.
