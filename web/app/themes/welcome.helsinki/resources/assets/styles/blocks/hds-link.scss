@@ -31,7 +31,8 @@
     transform: translateX(5px);
   }
 
-  &:hover &__icon--external {
+  &:hover &__icon--external,
+  &:hover &__icon--tel {
     transform: translateY(-5px);
   }
 
