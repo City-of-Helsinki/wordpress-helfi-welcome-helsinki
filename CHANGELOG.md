@@ -24,6 +24,7 @@
 - Updated Button Block styles.
 - Updated Highlight Block styles.
 - Updated related content and teaser styles.
+- Updated search result styles.
 - Removed automatic excerpts.
 
 ## 0.1.0

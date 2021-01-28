@@ -22,7 +22,7 @@
       <div class="alignwide">
         <div class="grid">
           @while(have_posts()) @php(the_post())
-            <div class="cell">
+            <div class="cell small:4 medium:4 large:4">
               @include('partials.content-search')
             </div>
           @endwhile
