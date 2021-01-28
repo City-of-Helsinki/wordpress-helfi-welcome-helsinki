@@ -1,6 +1,7 @@
 .content-info {
   $bp: medium;
 
+  z-index: 7426171; // z-index of chat plus one
   position: relative;
   padding: $spacing-xl $spacing-xl $spacing-m $spacing-xl;
   background-color: $color-bus;
