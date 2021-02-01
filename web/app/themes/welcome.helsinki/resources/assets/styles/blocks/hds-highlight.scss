@@ -3,8 +3,12 @@
   text-align: center;
 
   @include mq($from: large) {
-    padding: $spacing-5-xl;
+    padding: $spacing-3-xl $spacing-2-xl;
     text-align: left;
+  }
+
+  @include mq($from: xlarge) {
+    padding: $spacing-5-xl $spacing-4-xl;
   }
 
   &__columns {
@@ -27,11 +31,16 @@
 
     @include mq($from: large) {
       display: flex;
-      flex-basis: 15%;
+      flex-basis: 72px;
       flex-grow: 0;
       flex-shrink: 0;
       justify-content: center;
       margin-bottom: 0;
+      margin-right: $spacing-2-xl;
+    }
+
+    @include mq($from: xlarge) {
+      margin-right: $spacing-4-xl;
     }
   }
 
@@ -45,7 +54,11 @@
       flex-basis: auto;
       flex-shrink: 1;
       margin-bottom: 0;
-      margin-right: $spacing-5-xl;
+      margin-right: $spacing-2-xl;
+    }
+
+    @include mq($from: xlarge) {
+      margin-right: $spacing-4-xl;
     }
   }
 
@@ -55,7 +68,7 @@
     align-self: center;
 
     @include mq($from: large) {
-      flex-basis: 25%;
+      flex-basis: auto;
       flex-grow: 0;
       flex-shrink: 0;
       margin-bottom: 0;
@@ -70,9 +83,8 @@
     padding: 24px;
 
     @include mq($from: large) {
-      width: 112px;
-      height: 112px;
-      margin-right: 24px;
+      width: 72px;
+      height: 72px;
     }
   }
 
@@ -82,11 +94,6 @@
 
   .wp-block-hds-highlight__heading + .wp-block-hds-highlight__body {
     margin-top: 20px;
-  }
-
-  &__button .wp-block-button__link {
-    font-size: 20px;
-    font-weight: bold;
   }
 
   &__link-url-input {
