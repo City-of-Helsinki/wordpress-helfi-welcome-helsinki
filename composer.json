@@ -107,6 +107,7 @@
     "wpackagist-plugin/searchwp-live-ajax-search": "1.4.6.1",
     "wpackagist-plugin/mandatory-excerpt": "^1.1",
     "wpackagist-plugin/complianz-gdpr": "^4.9",
+    "wpackagist-plugin/infogram": "^1.6",
 
     "private/custom-facebook-feed-pro": "^3.18"
   },
