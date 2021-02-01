@@ -27,6 +27,7 @@
 - Updated search result styles.
 - Removed automatic excerpts.
 - Updated top navigation dropdown styles.
+- Enabled table block.
 
 ## 0.1.0
 
