@@ -2,3 +2,7 @@ ul,
 ol {
   text-align: left;
 }
+
+.entry-content li + li {
+  margin-top: $spacing-2-xs;
+}

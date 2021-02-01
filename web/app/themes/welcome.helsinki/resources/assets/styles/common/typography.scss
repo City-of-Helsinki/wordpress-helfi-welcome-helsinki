@@ -6,8 +6,8 @@ h5,
 h6 {
   font-family: $font-default, Georgia, "Times", "Times New Roman", serif;
   font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-block-start: 0;
+  margin-block-end: $spacing-m;
   line-height: $lineheight-m;
 
   // increase specificity to override inline editor styles

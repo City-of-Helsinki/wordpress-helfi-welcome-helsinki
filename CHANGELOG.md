@@ -29,6 +29,7 @@
 - Updated top navigation dropdown styles.
 - Enabled table block.
 - Updated highlight block styles.
+- Tweaked various spacing.
 
 ## 0.1.0
 
