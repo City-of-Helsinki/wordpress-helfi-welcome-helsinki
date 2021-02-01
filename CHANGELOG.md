@@ -26,6 +26,7 @@
 - Updated related content and teaser styles.
 - Updated search result styles.
 - Removed automatic excerpts.
+- Updated top navigation dropdown styles.
 
 ## 0.1.0
 

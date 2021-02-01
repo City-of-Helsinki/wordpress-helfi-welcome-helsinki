@@ -122,7 +122,7 @@
       }
 
       .is-level-1:not(.has-children) > &:focus::after,
-      .is-level-1:not(.has-children)[aria-expanded="true"] > &::after {
+      .is-level-1[aria-expanded="true"] > &::after {
         left: 0;
         right: 0;
         border-bottom-color: $color-black-90;
@@ -131,9 +131,12 @@
       &:focus,
       .is-level-1.has-children[aria-expanded="true"] > & {
         outline: none;
-        box-shadow: 0 0 0 3px $color-focus-outline-text-input-default;
         transform: translate3d(0, 0, 0);
         border-radius: 2px;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px $color-focus-outline-text-input-default;
       }
     }
 
