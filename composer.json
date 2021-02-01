@@ -26,7 +26,19 @@
   "repositories": [
     { "type": "composer", "url": "https://wpackagist.org" },
     { "type": "composer", "url": "https://wp-languages.github.io/" },
-    { "type": "composer", "url": "https://packagist.minasithil.genero.fi/" }
+    { "type": "composer", "url": "https://packagist.minasithil.genero.fi/" },
+    {
+      "type": "package",
+      "package": {
+        "name": "private/custom-facebook-feed-pro",
+        "version": "3.18.2",
+        "type": "wordpress-plugin",
+        "dist": {
+          "url": "./extra-plugins/Custom-Facebook-Feed-WP-Plugin-3.18.2-Smash.zip",
+          "type": "zip"
+        }
+      }
+    }
   ],
   "require": {
     "php": ">=7.1",
@@ -94,7 +106,9 @@
     "wpackagist-plugin/relevanssi": "4.7.2.1",
     "wpackagist-plugin/searchwp-live-ajax-search": "1.4.6.1",
     "wpackagist-plugin/mandatory-excerpt": "^1.1",
-    "wpackagist-plugin/complianz-gdpr": "^4.9"
+    "wpackagist-plugin/complianz-gdpr": "^4.9",
+
+    "private/custom-facebook-feed-pro": "^3.18"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.4.2",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd5707b795c74d38a214fcfb00f65cdd",
+    "content-hash": "c39486a286d19b9f965491f35000c7c0",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -2741,6 +2741,17 @@
                 "type"
             ],
             "time": "2020-03-21T18:07:53+00:00"
+        },
+        {
+            "name": "private/custom-facebook-feed-pro",
+            "version": "3.18.2",
+            "dist": {
+                "type": "zip",
+                "url": "./extra-plugins/Custom-Facebook-Feed-WP-Plugin-3.18.2-Smash.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "psr/container",
