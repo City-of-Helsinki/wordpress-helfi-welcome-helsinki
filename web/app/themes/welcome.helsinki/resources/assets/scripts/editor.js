@@ -159,7 +159,6 @@ var excludeBlockTypes = [
   'core-embed/vimeo',
   'core-embed/wordpress',
   'core-embed/wordpress-tv',
-  'core-embed/youtube',
 ];
 wp.hooks.addFilter('blocks.registerBlockType', 'pw-examples/exclude-blocks', function(settings, name) {
   if (excludeBlockTypes.indexOf(name) !== -1) {

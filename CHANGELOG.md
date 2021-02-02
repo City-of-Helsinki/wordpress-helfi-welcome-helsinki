@@ -30,6 +30,7 @@
 - Enabled table block.
 - Updated highlight block styles.
 - Tweaked various spacing.
+- Enabled YouTube embed block.
 
 ## 0.1.0
 
