@@ -89,6 +89,8 @@ function keydownListener(e) {
 }
 
 export function button(button) {
+  if (!button) return;
+
   const parent = button.parentNode;
 
   parent.addEventListener('mouseout', () => requestAnimationFrame(() => close(button)));
