@@ -1,0 +1,19 @@
+.cc-window {
+  z-index: 7426172 !important; // z-index of footer plus one
+  font-family: inherit !important;
+
+  .cc-message {
+    margin-bottom: $spacing-l !important;
+
+    .cc-link {
+      display: block !important;
+      padding: 0 !important;
+      margin-top: $spacing-m;
+
+      &:hover {
+        opacity: 1;
+        background-color: transparent;
+      }
+    }
+  }
+}
