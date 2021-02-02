@@ -1,4 +1,5 @@
 .cc-window {
+  padding: $spacing-m !important;
   z-index: 7426172 !important; // z-index of footer plus one
   font-family: inherit !important;
 
@@ -13,6 +14,26 @@
       &:hover {
         opacity: 1;
         background-color: transparent;
+      }
+    }
+  }
+
+  .cc-compliance {
+    flex-direction: row-reverse;
+    margin-left: -1 * $spacing-3-xs;
+    margin-right: -1 * $spacing-3-xs;
+
+    a {
+      margin-left: $spacing-3-xs;
+      margin-right: $spacing-3-xs;
+    }
+
+    @include mq($until: medium) {
+      flex-direction: column-reverse;
+      align-items: stretch;
+
+      a {
+        margin-bottom: $spacing-2-xs;
       }
     }
   }
