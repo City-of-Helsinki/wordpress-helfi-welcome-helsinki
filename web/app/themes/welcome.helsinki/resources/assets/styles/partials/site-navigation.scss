@@ -122,7 +122,7 @@
       }
 
       .is-level-1:not(.has-children) > &:focus::after,
-      .is-level-1:not(.has-children)[aria-expanded="true"] > &::after {
+      .is-level-1[aria-expanded="true"] > &::after {
         left: 0;
         right: 0;
         border-bottom-color: $color-black-90;
