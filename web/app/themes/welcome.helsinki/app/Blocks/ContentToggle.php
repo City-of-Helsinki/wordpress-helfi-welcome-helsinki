@@ -12,6 +12,7 @@ class ContentToggle extends NativeBlock
     {
         return [
             'text' => $this->attributes->text,
+            'id' => uniqid()
         ];
     }
 }
