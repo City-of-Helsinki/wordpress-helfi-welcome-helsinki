@@ -4,7 +4,13 @@
     @include('partials.header')
   </header>
 
-  <main class="site__content">
+  <main
+    class="site__content"
+    @if (get_field('schema_org_is_faq_page'))
+      itemscope
+      itemtype="https://schema.org/FAQPage"
+    @endif
+  >
     @yield('content')
   </main>
 

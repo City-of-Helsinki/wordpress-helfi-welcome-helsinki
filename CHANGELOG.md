@@ -32,6 +32,7 @@
 - Tweaked various spacing.
 - Enabled YouTube embed block.
 - Added question and answer block.
+- Added option to mark a post or or page as schema.org FAQPage.
 
 ## 0.1.0
 
