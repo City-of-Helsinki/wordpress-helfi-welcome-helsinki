@@ -31,6 +31,7 @@
 - Updated highlight block styles.
 - Tweaked various spacing.
 - Enabled YouTube embed block.
+- Added question and answer block.
 
 ## 0.1.0
 

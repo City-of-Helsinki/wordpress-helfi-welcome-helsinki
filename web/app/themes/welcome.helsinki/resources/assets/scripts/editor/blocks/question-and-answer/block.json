@@ -1,0 +1,9 @@
+{
+  "name": "hds/question-and-answer",
+  "category": "sage",
+  "attributes": {
+    "question": {
+      "type": "string"
+    }
+  }
+}

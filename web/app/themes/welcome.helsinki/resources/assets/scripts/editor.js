@@ -13,6 +13,7 @@ import './editor/blocks/icon-and-text';
 import './editor/blocks/highlight';
 import './editor/blocks/link';
 import './editor/blocks/link-list';
+import './editor/blocks/question-and-answer';
 
 /**
  * Forces image fill for Media & Text blocks with the hover style.
