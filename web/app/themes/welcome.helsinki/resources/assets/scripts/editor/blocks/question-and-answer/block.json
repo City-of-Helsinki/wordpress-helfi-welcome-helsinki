@@ -2,6 +2,10 @@
   "name": "hds/question-and-answer",
   "category": "sage",
   "attributes": {
+    "style": {
+      "type": "string",
+      "default": "info"
+    },
     "question": {
       "type": "string"
     }

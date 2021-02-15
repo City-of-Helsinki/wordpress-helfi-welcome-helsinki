@@ -11,6 +11,7 @@ class QuestionAndAnswer extends NativeBlock
     public function with()
     {
         return [
+            'style' => $this->attributes->style,
             'question' => $this->attributes->question,
         ];
     }

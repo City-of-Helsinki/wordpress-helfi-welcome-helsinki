@@ -1,5 +1,5 @@
 <div
-  class="{{ esc_attr($block->classes) }}"
+  class="{{ esc_attr($block->classes) }} is-style-{{ $style }}"
   itemscope
   itemprop="mainEntity"
   itemtype="https://schema.org/Question"
