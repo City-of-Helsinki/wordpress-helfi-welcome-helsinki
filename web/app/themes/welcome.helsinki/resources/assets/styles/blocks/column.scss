@@ -1,3 +1,11 @@
+.wp-block-columns {
+  &.is-style-images-and-links {
+    @include mq($from: $breakpoint-l) {
+      padding: 0;
+    }
+  }
+}
+
 .wp-block-column {
   // column blocks can contain other aligned blocks.
   .alignwide,
@@ -11,5 +19,11 @@
   // Note breakpoint is taken from wp core.
   @media (max-width: 782px) {
     margin-bottom: $spacing-m;
+  }
+
+  .wp-block-columns.is-style-images-and-links & {
+    figure {
+      margin-bottom: $spacing-m;
+    }
   }
 }
