@@ -25,6 +25,9 @@
     },
     "linkUrl": {
       "type": "string"
+    },
+    "linkTargetBlank": {
+      "type": "boolean"
     }
   }
 }

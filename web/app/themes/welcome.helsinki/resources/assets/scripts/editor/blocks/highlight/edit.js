@@ -9,6 +9,7 @@ import {
   URLInput,
 } from '@wordpress/block-editor'
 import {
+  CheckboxControl,
   PanelBody,
   PanelRow,
   RadioControl,
@@ -29,7 +30,7 @@ function BlockEdit({
   backgroundColor,
   setBackgroundColor,
 }) {
-  const { iconName, heading, body, linkText, linkUrl } = attributes
+  const { iconName, heading, body, linkText, linkUrl, linkTargetBlank } = attributes
 
   return (
     <div
@@ -67,6 +68,13 @@ function BlockEdit({
           />
         </div>
         <div className={`${CLASS_NAME}__column button-column`}>
+          <CheckboxControl
+            label={__('Open in new tab', DOMAIN)}
+            checked={linkTargetBlank}
+            onChange={linkTargetBlank => {
+              setAttributes({linkTargetBlank})
+            }}
+          />
           <URLInput
             placeholder={__('Enter link url', DOMAIN)}
             tagName="div"
@@ -146,6 +154,7 @@ BlockEdit.propTypes = {
     body: PropTypes.string,
     linkText: PropTypes.string,
     linkUrl: PropTypes.string,
+    linkTargetBlank: PropTypes.boolean,
     iconColor: PropTypes.string,
     textColor: PropTypes.string,
     backgroundColor: PropTypes.string,

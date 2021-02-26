@@ -28,11 +28,11 @@
 - Removed automatic excerpts.
 - Updated top navigation dropdown styles.
 - Enabled table block.
-- Updated highlight block styles.
 - Tweaked various spacing.
 - Enabled YouTube embed block.
 - Added question and answer block.
 - Added option to mark a post or or page as schema.org FAQPage.
+- Added option to open highlight block link in new tab.
 
 ## 0.1.0
 

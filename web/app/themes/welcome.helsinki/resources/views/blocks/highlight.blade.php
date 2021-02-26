@@ -21,7 +21,9 @@
         <div class="wp-block-hds-highlight__column button-column">
             @if ($linkText)
                 <div class="wp-block-button is-style-outline wp-block-hds-highlight__button">
-                    <a class="wp-block-button__link has-{!! $textColor !!}-color" href="{{ $linkUrl }}">
+                    <a class="wp-block-button__link has-{!! $textColor !!}-color" href="{{ $linkUrl }}"
+                        @if ($linkTargetBlank) target="_blank" @endif
+                    >
                         {{ $linkText }}
                     </a>
                 </div>
