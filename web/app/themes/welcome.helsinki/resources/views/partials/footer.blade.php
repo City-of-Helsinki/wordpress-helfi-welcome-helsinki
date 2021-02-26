@@ -8,9 +8,8 @@
       @endif
       <a href="/" class="footer__name">welcome.helsinki</a>
     </div>
-    <div class="footer__menu">
-      @php(dynamic_sidebar('footer-menu'))
-    </div>
+    <div class="footer__banner">@php(dynamic_sidebar('footer-banner'))</div>
+    <div class="footer__menu">@php(dynamic_sidebar('footer-menu'))</div>
     <div class="footer__contact">
       <div class="footer__social">
         @php(dynamic_sidebar('footer-contact-social'))

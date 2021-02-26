@@ -182,6 +182,11 @@ add_action('widgets_init', function () {
     ] + $config);
 
     register_sidebar([
+        'name' => __('Footer: Banner', 'sage'),
+        'id' => 'footer-banner'
+    ] + $config);
+
+    register_sidebar([
         'name' => __('Footer: Contact / social', 'sage'),
         'id' => 'footer-contact-social'
     ] + $config);

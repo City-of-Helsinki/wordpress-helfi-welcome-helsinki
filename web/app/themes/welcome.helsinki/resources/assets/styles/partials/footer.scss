@@ -74,9 +74,18 @@
     }
   }
 
+  .footer__banner {
+    &:not(:empty) {
+      padding-top: $spacing-l;
+      padding-bottom: $spacing-l;
+    }
+  }
+
   .footer__menu {
-    padding-top: $spacing-l;
-    padding-bottom: $spacing-l;
+    &:not(:empty) {
+      padding-top: $spacing-l;
+      padding-bottom: $spacing-l;
+    }
 
     .menu {
       display: flex;
