@@ -4,7 +4,7 @@
   z-index: 7426171; // z-index of chat plus one
   position: relative;
   padding: $spacing-xl $spacing-xl $spacing-m $spacing-xl;
-  background-color: $color-bus;
+  background-color: $color-black;
   color: white;
 
   @include mq($from: $bp) {
@@ -20,7 +20,7 @@
     width: 100%;
     height: $footer-koro-height;
     background-repeat: repeat-x;
-    background-image: svg-load('./images/koro-basic.svg', fill='#0000bf');
+    background-image: svg-load('./images/koro-basic.svg', fill='#000000');
   }
 
   .footer {
