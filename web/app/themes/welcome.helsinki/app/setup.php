@@ -177,6 +177,11 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
+        'name' => __('Front page: Banner', 'sage'),
+        'id' => 'front-page-banner'
+    ] + $config);
+
+    register_sidebar([
         'name' => __('Footer: Menu', 'sage'),
         'id' => 'footer-menu'
     ] + $config);

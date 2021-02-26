@@ -33,6 +33,7 @@
 - Added question and answer block.
 - Added option to mark a post or or page as schema.org FAQPage.
 - Added option to open highlight block link in new tab.
+- Added option to display alert banner on front page.
 
 ## 0.1.0
 

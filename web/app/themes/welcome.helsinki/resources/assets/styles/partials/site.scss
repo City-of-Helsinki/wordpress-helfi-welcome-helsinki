@@ -5,6 +5,21 @@
   height: 100%;
 }
 
+.site__banner {
+  background-color: red;
+  text-align: center;
+  padding: $spacing-xs;
+  color: white;
+
+  a {
+    color: white;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
 .site__header {
   background-color: $color-white;
   z-index: 100;
