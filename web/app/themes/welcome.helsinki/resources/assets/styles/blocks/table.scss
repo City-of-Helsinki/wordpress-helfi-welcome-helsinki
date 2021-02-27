@@ -1,43 +1,45 @@
 .wp-block-table {
   text-align: left;
+  width: 100% !important;
 
-  $colors: (
-    'subtle-light-gray': #f3f4f5,
-    'subtle-pale-green': #e9fbe5,
-    'subtle-pale-blue': #e7f5fe,
-    'subtle-pale-pink': #fcf0ef,
-  );
+  table {
+    border-spacing: 0;
+    width: 100%;
+  }
+
+  thead {
+    border: none;
+    color: $color-white;
+    background-color: $color-bus;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: $color-bus-light;
+  }
 
   td,
   th {
+    border: none;
     border: 0;
-    padding: 10px;
+    padding: $spacing-2-xs $spacing-m;
+    word-break: normal !important;
   }
 
-  @each $name, $color in $colors {
-    > .has-#{$name}-background-color {
-      background-color: $color;
+  th {
+    padding-top: $spacing-2-xs;
+    padding-bottom: $spacing-2-xs;
+    line-height: $lineheight-l;
+    font-weight: normal;
+
+    @include mq($from: large) {
+      padding-top: $spacing-m;
+      padding-bottom: $spacing-m;
     }
   }
 
   &.is-style-stripes {
-    td,
-    th {
-      border-color: transparent;
-    }
-
-    tbody tr:nth-child(odd) {
+    tbody tr:nth-child(even) {
       background-color: $color-black-10;
-    }
-
-    > .has-background {
-      background-color: transparent;
-    }
-
-    @each $name, $color in $colors {
-      > .has-#{$name}-background-color tbody tr:nth-child(odd) {
-        background-color: $color;
-      }
     }
   }
 }
