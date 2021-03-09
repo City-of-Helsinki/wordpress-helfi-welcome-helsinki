@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6324fdca944bca14772b1e9964a9eb6",
+    "content-hash": "cca29c8c6de4017309dfe22a938bfc85",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -999,50 +999,6 @@
             "time": "2017-01-20T21:14:22+00:00"
         },
         {
-            "name": "generoi/advanced-custom-fields-pro",
-            "version": "v5.8.11",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:generoi/advanced-custom-fields-pro.git",
-                "reference": "46410e5d8f78a45dc4544cf73a341754dad67ef8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/generoi/advanced-custom-fields-pro/zipball/46410e5d8f78a45dc4544cf73a341754dad67ef8",
-                "reference": "46410e5d8f78a45dc4544cf73a341754dad67ef8",
-                "shasum": ""
-            },
-            "archive": {
-                "exclude": [
-                    ".gitignore"
-                ]
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=5.4.0"
-            },
-            "type": "wordpress-plugin",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oskar Schöldström",
-                    "email": "public@oxy.fi"
-                }
-            ],
-            "description": "Advanced Custom Fields Pro",
-            "homepage": "https://www.advancedcustomfields.com/",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/generoi/advanced-custom-fields-pro/issues",
-                "source": "https://github.com/generoi/advanced-custom-fields-pro/tree/v5.8.11"
-            },
-            "time": "2020-05-22T07:32:05+00:00"
-        },
-        {
             "name": "generoi/genero-conf",
             "version": "v1.3.1",
             "source": {
@@ -1073,134 +1029,6 @@
                 "source": "https://github.com/generoi/genero-conf/tree/v1.3.1"
             },
             "time": "2020-05-04T18:24:44+00:00"
-        },
-        {
-            "name": "generoi/genero-status",
-            "version": "v0.0.8",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:generoi/genero-status.git",
-                "reference": "a8f50985df11b6d352e38a1874211d4772586025"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/generoi/genero-status/zipball/a8f50985df11b6d352e38a1874211d4772586025",
-                "reference": "a8f50985df11b6d352e38a1874211d4772586025",
-                "shasum": ""
-            },
-            "archive": {
-                "exclude": [
-                    ".gitignore"
-                ]
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=5.4.0"
-            },
-            "type": "php-script",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oskar Schöldström",
-                    "email": "public@oxy.fi"
-                }
-            ],
-            "description": "Genero Status",
-            "homepage": "https://github.com/generoi/genero-status",
-            "support": {
-                "issues": "https://github.com/generoi/genero-status/issues",
-                "source": "https://github.com/generoi/genero-status/tree/master"
-            },
-            "time": "2017-05-23T13:32:16+00:00"
-        },
-        {
-            "name": "generoi/gravityforms",
-            "version": "v2.4.17.20",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:generoi/gravityforms.git",
-                "reference": "db63bce52f383ef9f7a7737c3f17c66833cc103e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/generoi/gravityforms/zipball/db63bce52f383ef9f7a7737c3f17c66833cc103e",
-                "reference": "db63bce52f383ef9f7a7737c3f17c66833cc103e",
-                "shasum": ""
-            },
-            "archive": {
-                "exclude": [
-                    ".gitignore"
-                ]
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=5.6.0"
-            },
-            "type": "wordpress-plugin",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oskar Schöldström",
-                    "email": "public@oxy.fi"
-                }
-            ],
-            "description": "Gravity Forms",
-            "homepage": "http://www.gravityhelp.com",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/generoi/gravityforms/issues",
-                "source": "https://github.com/generoi/gravityforms/tree/v2.4.17.20"
-            },
-            "time": "2020-04-12T13:45:22+00:00"
-        },
-        {
-            "name": "generoi/polylang-pro",
-            "version": "v2.7.3",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:generoi/polylang-pro.git",
-                "reference": "476a8f29e210974aa35c7bd56c8471fdeaa53198"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/generoi/polylang-pro/zipball/476a8f29e210974aa35c7bd56c8471fdeaa53198",
-                "reference": "476a8f29e210974aa35c7bd56c8471fdeaa53198",
-                "shasum": ""
-            },
-            "archive": {
-                "exclude": [
-                    ".gitignore"
-                ]
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=5.4.0"
-            },
-            "type": "wordpress-plugin",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Frédéric Demarle"
-                }
-            ],
-            "description": "Polylang PRO",
-            "homepage": "https://polylang.pro",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/generoi/polylang-pro/issues",
-                "source": "https://github.com/generoi/polylang-pro/tree/v2.7.3"
-            },
-            "time": "2020-06-09T11:20:50+00:00"
         },
         {
             "name": "generoi/robo-genero",
@@ -2743,11 +2571,44 @@
             "time": "2020-03-21T18:07:53+00:00"
         },
         {
+            "name": "private/advanced-custom-fields-pro",
+            "version": "5.8.11",
+            "dist": {
+                "type": "zip",
+                "url": "./extra-plugins/generoi-advanced-custom-fields-pro.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
             "name": "private/custom-facebook-feed-pro",
             "version": "3.18.2",
             "dist": {
                 "type": "zip",
                 "url": "./extra-plugins/Custom-Facebook-Feed-WP-Plugin-3.18.2-Smash.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "private/gravityforms",
+            "version": "2.4.17.20",
+            "dist": {
+                "type": "zip",
+                "url": "./extra-plugins/generoi-gravityforms.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "private/polylang-pro",
+            "version": "2.7.3",
+            "dist": {
+                "type": "zip",
+                "url": "./extra-plugins/generoi-polylang-pro.zip",
                 "reference": null,
                 "shasum": null
             },
