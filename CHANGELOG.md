@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Added search box to search results page.
+- Fixed tables on small screens.
 
 ## 1.0.0
 

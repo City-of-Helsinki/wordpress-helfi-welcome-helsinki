@@ -1,6 +1,8 @@
 .wp-block-table {
-  text-align: left;
+  display: block !important;
   width: 100% !important;
+  overflow-x: auto;
+  text-align: left;
 
   table {
     border-spacing: 0;
@@ -21,8 +23,13 @@
   th {
     border: none;
     border: 0;
-    padding: $spacing-2-xs $spacing-m;
+    padding: $spacing-2-xs $spacing-xs;
     word-break: normal !important;
+
+    @include mq($from: large) {
+      padding-left: $spacing-m;
+      padding-right: $spacing-m;
+    }
   }
 
   th {
