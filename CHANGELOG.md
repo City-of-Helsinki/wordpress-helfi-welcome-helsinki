@@ -9,6 +9,7 @@
 - Fixed chat showing on top of mobile menu.
 - Fixed chat not fitting on screen on small screens.
 - Fixed too much margin under Custom Facebook Feed Pro content.
+- Fixed too much margin in some block combinations.
 
 ## 1.0.0
 
