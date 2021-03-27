@@ -8,12 +8,12 @@
         </div>
         <div class="wp-block-hds-highlight__column body-column">
             @if ($heading)
-                <h2 class="wp-block-hds-highlight__heading has-{!! $textColor !!}-color">
+                <h2 class="wp-block-hds-highlight__heading @if ($textColor) has-{!! $textColor !!}-color has-text-color @endif">
                     {!! wp_kses_post($heading) !!}
             </h2>
             @endif
             @if ($body)
-                <div class="wp-block-hds-highlight__body has-{!! $textColor !!}-color">
+                <div class="wp-block-hds-highlight__body @if ($textColor) has-{!! $textColor !!}-color has-text-color @endif">
                     {!! wp_kses_post($body) !!}
                 </div>
             @endif
@@ -21,9 +21,7 @@
         <div class="wp-block-hds-highlight__column button-column">
             @if ($linkText)
                 <div class="wp-block-button is-style-outline wp-block-hds-highlight__button">
-                    <a class="wp-block-button__link has-{!! $textColor !!}-color" href="{{ $linkUrl }}"
-                        @if ($linkTargetBlank) target="_blank" @endif
-                    >
+                    <a class="wp-block-button__link @if ($textColor) has-{!! $textColor !!}-color has-text-color @endif" href="{{ $linkUrl }}">
                         {{ $linkText }}
                     </a>
                 </div>

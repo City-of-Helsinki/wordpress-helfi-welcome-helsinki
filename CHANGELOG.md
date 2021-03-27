@@ -4,6 +4,7 @@
 
 - Added search box to search results page.
 - Updated spacing between specific elements annotated with specific classes.
+- Updated button colors and hover effects.
 - Fixed tables on small screens.
 - Fixed chat showing on top of mobile menu.
 - Fixed chat not fitting on screen on small screens.

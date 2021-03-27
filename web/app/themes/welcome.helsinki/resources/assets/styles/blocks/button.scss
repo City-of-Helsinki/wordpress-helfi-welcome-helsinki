@@ -3,22 +3,33 @@
  */
 
 .wp-block-button {
-  color: $color-white;
   border-radius: 0;
-  background-color: $primary-color;
 
   &.is-style-outline {
-    color: $primary-color;
-    background-color: transparent;
-
     .wp-block-button__link {
-      &:hover {
-        background-color: #f2f2fc;
+      &:not(.has-text-color),
+      &.has-white-color {
+        border-color: $color-white;
+        color: $color-white;
+        background-color: transparent;
+
+        &:hover {
+          border-color: $color-black;
+          background-color: $color-black;
+          color: $color-white;
+        }
       }
 
-      &:focus {
-        outline: solid 3px $color-coat-of-arms;
-        outline-offset: 2px;
+      &.has-black-color {
+        border-color: $color-black;
+        color: $color-black;
+        background-color: transparent;
+
+        &:hover {
+          border-color: $color-white;
+          background-color: $color-white;
+          color: $color-black;
+        }
       }
     }
   }
