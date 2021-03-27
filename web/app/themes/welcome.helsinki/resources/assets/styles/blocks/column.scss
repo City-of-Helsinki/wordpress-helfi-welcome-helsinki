@@ -4,6 +4,43 @@
       padding: 0;
     }
   }
+
+  &.is-style-link-boxes {
+    $spacing: 32px;
+
+    margin-bottom: $spacing;
+
+    @media (max-width: 992px) {
+      margin-left: $spacing !important;
+      margin-right: $spacing !important;
+    }
+
+    & + & {
+      margin-top: $spacing;
+    }
+
+    .wp-block-column {
+      margin-bottom: $spacing;
+
+      @media (min-width: 600px) {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 600px) {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .wp-block-column > .wp-block-group {
+      margin: 0;
+
+      @media (min-width: 600px) {
+        height: 100%;
+      }
+    }
+  }
 }
 
 .wp-block-column {
