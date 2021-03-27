@@ -55,6 +55,7 @@ div.gwc-chat-message-container {
 .gwc-chat-embedded-window {
   border: none !important;
   width: 500px;
+  max-width: 100%;
   background: white;
 }
 

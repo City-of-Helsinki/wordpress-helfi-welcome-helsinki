@@ -5,6 +5,7 @@
 - Added search box to search results page.
 - Fixed tables on small screens.
 - Fixed chat showing on top of mobile menu.
+- Fixed chat not fitting on screen on small screens.
 
 ## 1.0.0
 
