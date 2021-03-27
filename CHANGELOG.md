@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added search box to search results page.
+
 ## 1.0.0
 
 - Added support for having only one language.
