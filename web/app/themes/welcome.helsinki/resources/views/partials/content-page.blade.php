@@ -13,8 +13,8 @@
           </div>
           <div class="koro koro--pulse white bottom mobile-koro">
           </div>
+          @if (get_the_post_thumbnail_url())
           <div class="wp-block-column is-vertically-aligned-center image-column">
-            @if (get_the_post_thumbnail_url())
               <figure class="wp-block-image size-large">
                 @php(the_post_thumbnail('large', ['sizes' => '100vw']))
                 @if (get_field('featured_image_caption'))
@@ -23,8 +23,8 @@
                   </figcaption>
                 @endif
               </figure>
-            @endif
-          </div>
+            </div>
+          @endif
         </div>
       </x-group>
       <div class="koro koro--pulse white bottom desktop-koro">

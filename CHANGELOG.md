@@ -12,6 +12,7 @@
 - Fixed chat not fitting on screen on small screens.
 - Fixed too much margin under Custom Facebook Feed Pro content.
 - Fixed too much margin in some block combinations.
+- Fixed title sizing on pages without featured image.
 
 ## 1.0.0
 
