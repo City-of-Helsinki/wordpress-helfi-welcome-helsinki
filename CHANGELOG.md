@@ -10,6 +10,7 @@
 - Updated spacing around some headings.
 - Updated spacing above some images.
 - Updated spacing on the left side of lists.
+- Updated basic koro image.
 - Fixed tables on small screens.
 - Fixed chat showing on top of mobile menu.
 - Fixed chat not fitting on screen on small screens.
