@@ -8,6 +8,7 @@
 - Updated spacing around link block links in some scenarios.
 - Updated button colors and hover effects.
 - Updated spacing around some headings.
+- Updated spacing above some images.
 - Fixed tables on small screens.
 - Fixed chat showing on top of mobile menu.
 - Fixed chat not fitting on screen on small screens.

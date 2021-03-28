@@ -164,3 +164,12 @@
     padding: $spacing-l;
   }
 }
+
+// A special case...
+.wp-block-group > .wp-block-group__inner-container > .wp-block-columns:first-child {
+  margin-top: 0;
+
+  > .wp-block-column > .wp-block-image {
+    margin-top: 0;
+  }
+}
