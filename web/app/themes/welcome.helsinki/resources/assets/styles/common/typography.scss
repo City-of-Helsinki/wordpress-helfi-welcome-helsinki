@@ -10,6 +10,10 @@ h6 {
   margin-block-end: $spacing-m;
   line-height: $lineheight-m;
 
+  .entry-content > .wp-block-group > .wp-block-group__inner-container > & {
+    margin-block-start: $spacing-l;
+  }
+
   // increase specificity to override inline editor styles
   @if not $is-frontend {
     :root & {
