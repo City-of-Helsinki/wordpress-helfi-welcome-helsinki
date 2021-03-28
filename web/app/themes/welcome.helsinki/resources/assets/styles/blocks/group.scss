@@ -173,3 +173,7 @@
     margin-top: 0;
   }
 }
+
+.entry-content > .wp-block-group .wp-block-group > .wp-block-group__inner-container {
+  --content-width: 100%;
+}
