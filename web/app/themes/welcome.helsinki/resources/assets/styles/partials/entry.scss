@@ -163,7 +163,10 @@
         display: block;
         margin-left: -$spacing-layout-2-xs;
         margin-right: -$spacing-layout-2-xs;
-        margin-bottom: -50px;
+
+        &:last-child {
+          margin-bottom: -50px;
+        }
       }
 
       .desktop-koro {
