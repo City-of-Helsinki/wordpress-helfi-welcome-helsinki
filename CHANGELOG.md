@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.1.0
 
 - Added search box to search results page.
 - Updated spacing between specific elements annotated with specific classes.
