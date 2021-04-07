@@ -30,6 +30,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('chat.js', asset('chat/chat.js')->uri(), ['jquery'], null, true);
     wp_enqueue_style('chat.css', asset('chat/chat.css')->uri(), [], null);
 
+    wp_enqueue_script('first-steps-checklist.js', asset('scripts/WelcomeGuide.umd.min.js')->uri(), [], null, false);
+
     wp_localize_script('sage/app.js', 'Sage', [
         'locale' => get_locale(),
         'WP_DEBUG' => WP_DEBUG,
