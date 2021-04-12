@@ -29,7 +29,8 @@ mix.js('resources/assets/scripts/app.js', 'scripts')
 mix.copyWatched('resources/assets/js/WelcomeGuide.umd.min.js', 'dist/scripts');
 
 mix.copyWatched('resources/assets/images', 'dist/images', {base: 'resources/assets/images'})
-   .copyWatched('resources/assets/fonts', 'dist/fonts', {base: 'resources/assets/fonts'});
+   .copyWatched('resources/assets/fonts', 'dist/fonts', {base: 'resources/assets/fonts'})
+   .copyWatched('resources/assets/pdf', 'dist/pdf', {base: 'resources/assets/pdf'});
 
 mix.copy('resources/assets/scripts/polyfill.js', 'dist/scripts/polyfill.js')
   .copy('node_modules/jquery/dist/jquery.min.js', 'dist/scripts/jquery.js')

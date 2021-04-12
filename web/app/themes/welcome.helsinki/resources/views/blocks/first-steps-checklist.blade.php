@@ -4,7 +4,9 @@
     try {
       window.WelcomeGuide.mount({
         el: '#first-steps-checklist',
-        props: {}
+        props: {
+          pdfBaseUrl: '/app/themes/welcome.helsinki/dist/pdf'
+        }
       })
     } catch (err) {
       console.error(err)
