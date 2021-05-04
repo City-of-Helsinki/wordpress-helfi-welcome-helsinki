@@ -215,3 +215,11 @@ add_action('widgets_init', function () {
     ] + $config);
 
 });
+
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page([
+        'page_title' => __('First Steps Checklist'),
+        'menu_title' => __('First Steps Checklist'),
+        'menu_slug' => 'first-steps-checklist'
+    ]);
+}
