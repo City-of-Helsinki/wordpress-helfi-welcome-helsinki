@@ -16,4 +16,10 @@ class FirstStepsChecklist extends Block
     'mode' => false,
     'align' => true,
   ];
+
+  public function with()
+  {
+      return [
+      ];
+  }
 }
