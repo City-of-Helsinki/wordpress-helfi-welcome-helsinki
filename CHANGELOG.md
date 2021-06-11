@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added First Steps Checklist block.
+- Added Matomo tracking.
+
 ## 1.1.0
 
 - Added search box to search results page.
