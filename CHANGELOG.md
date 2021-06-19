@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Updated Matomo tracking code.
 - Updated First Steps Checklist application.
 
 ## 1.2.0
