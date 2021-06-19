@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Updated First Steps Checklist application.
+
 ## 1.2.0
 
 - Added First Steps Checklist block.
