@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Updated First Steps Checklist application.
+
 ## 1.3.0
 
 - Updated Matomo tracking code.

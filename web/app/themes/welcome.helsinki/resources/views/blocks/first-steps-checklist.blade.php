@@ -7,7 +7,9 @@
         props: {
           pdfBaseUrl: '{{ get_field('pdf_base_url', 'option') }}' || undefined,
           emailBaseUrl: '{{ get_field('email_base_url', 'option') }}' || undefined,
-          emailQueryKey: '{{ get_field('email_query_key', 'option') }}' || undefined
+          emailQueryKey: '{{ get_field('email_query_key', 'option') }}' || undefined,
+          questions: {!! get_field('questions', 'option') !!},
+          checklist: {!! get_field('checklist', 'option') !!}
         }
       })
     } catch (err) {
