@@ -42,8 +42,9 @@
     // push remaining columns to the right
     flex: 1 0 auto;
 
-    > h5 {
+    > h1 {
       margin-bottom: 0;
+      font-size: $fontsize-heading-xs;
     }
   }
 
