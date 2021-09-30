@@ -22,6 +22,7 @@
         href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(get_permalink()) }}"
         target="_blank"
         title="{{ __('Share on Facebook', 'gds') }}"
+        aria-label="{{ __('Share on Facebook', 'gds') }}"
         rel="nofollow"
       >
         <img class="icon" src="{{ \Roots\Asset('images/fontawesome/facebook-f-brands.svg') }}" />
@@ -34,7 +35,6 @@
         target="_blank"
         title="{{ __('Share on Twitter', 'hds') }}"
         aria-label="{{ __('Share on Twitter', 'hds') }}"
-        role="button"
         rel="nofollow"
       >
         <img class="icon" src="{{ \Roots\Asset('images/fontawesome/twitter-brands.svg') }}" />
