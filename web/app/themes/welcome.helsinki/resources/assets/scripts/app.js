@@ -30,3 +30,9 @@ const appHeight = () => {
 };
 window.addEventListener('resize', debounce(appHeight, 150));
 appHeight();
+
+if (document.querySelector('a[href="#top"]')) {
+  document.querySelector('a[href="#top"]').addEventListener('click', () => {
+    document.getElementById('skip-to-content').focus();
+  });
+}
