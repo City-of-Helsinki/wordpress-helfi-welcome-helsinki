@@ -11,7 +11,7 @@
     <h1>{{ $site_name }}</h1>
   </div>
 
-  <div class="site-header__search">
+  <div class="site-header__search site-header__search--desktop">
     @include('partials.search')
   </div>
 
@@ -22,12 +22,16 @@
   <div class="site-header__hamburger-button">
     <button
       class="site-hamburger-button"
-      aria-label="{{ __('Open navigation', 'welcome.helsinki') }}"
+      aria-label="{{ __('Navigation', 'welcome.helsinki') }}"
       aria-expanded="false"
       aria-controls="header"
     >
       <span aria-hidden="true"></span>
     </button>
+  </div>
+
+  <div class="site-header__search site-header__search--mobile">
+    @include('partials.search')
   </div>
 </div>
 

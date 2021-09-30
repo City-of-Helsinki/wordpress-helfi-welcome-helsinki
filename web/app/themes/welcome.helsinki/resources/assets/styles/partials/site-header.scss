@@ -51,8 +51,23 @@
   &__search {
     display: none;
 
-    @include mq($from: large) {
+    &--desktop,
+    &--mobile {
+      display: none;
+    }
+
+    .is-active &--mobile {
       display: block;
+    }
+
+    @include mq($from: large) {
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: block;
+      }
     }
   }
 
@@ -76,7 +91,6 @@
   // When navigation is activated on mobile
   .is-active & {
     .site-header__search {
-      display: block;
       padding-top: $spacing-m;
       padding-left: ($spacing-m - $spacing-s);
       padding-right: ($spacing-m - $spacing-s);
@@ -96,7 +110,6 @@
       }
 
       // Move last and take up whole row
-      order: 5;
       flex-basis: 100%;
     }
   }
