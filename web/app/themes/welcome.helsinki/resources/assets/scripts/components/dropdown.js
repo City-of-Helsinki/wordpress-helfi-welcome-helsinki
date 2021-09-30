@@ -3,117 +3,103 @@ const KEY_DOWN = 40;
 const KEY_LEFT = 37;
 const KEY_RIGHT = 39;
 
-function open(el) {
-  el.setAttribute('aria-expanded', true);
-}
-
-function close(el) {
-  el.setAttribute('aria-expanded', false);
-}
-
 function keydownListener(e) {
-  const currentLink = e.target;
+  const currentLink = e.target
+  const currentItem = currentLink.parentElement
+  const nextItem = currentItem.nextElementSibling
+  const prevItem = currentItem.previousElementSibling
+  const nextLink = nextItem ? nextItem.querySelector('a') : undefined
+  const prevLink = prevItem ? prevItem.querySelector('a') : undefined
+  const submenu = currentItem.querySelector('[role="menu"]')
+  const isInSubmenu = currentItem.parentElement.getAttribute('role') === 'menu'
+  const parentItem = isInSubmenu ? currentItem.parentElement.parentElement : undefined
+  const parentLink = parentItem ? parentItem.querySelector('a') : undefined
 
-  // The element that would trigger a submenu
-  const currentItem = currentLink.matches('[aria-haspopup]') ?
-    currentLink :
-    currentLink.closest('[aria-haspopup');
-
-  const isInSubmenu = !! currentLink.closest('[role="menu"]');
-
-  const nextItem = currentLink.parentElement.nextElementSibling;
-  const prevItem = currentLink.parentElement.previousElementSibling;
-  const nextLink = nextItem ? nextItem.querySelector('a') : null;
-  const prevLink = prevItem ? prevItem.querySelector('a') : null;
-
-  // Either current submenu or inner submenu
-  const submenu = isInSubmenu ?
-    currentLink.closest('[role="menu"]') :
-    currentLink.parentElement.querySelector('[role="menu"]');
-
-  // The closest tabbable element which is a parent
-  const parentLink = isInSubmenu ?
-    submenu.parentElement.querySelector('a, button') :
-    null;
-
-  // The closest parent element that triggers a submenu
-  const parentItem = parentLink ?
-    (parentLink.matches('[aria-haspopup') ? parentLink : parentLink.closest('[aria-haspopup')) :
-    null;
-
-  switch (e.keyCode) {
-    case KEY_DOWN:
-      // If it's in a submenu, go to next. If not, open submenu
+  switch(e.keyCode) {
+    case KEY_LEFT:
       if (isInSubmenu) {
-        if (nextLink) {
-          nextLink.focus();
-          e.preventDefault();
-        }
-      } else if (submenu) {
-        open(currentItem);
-        submenu.querySelector('[role="menuitem"]').focus();
-        e.preventDefault();
+        closeItem(parentItem)
+        parentLink && parentLink.focus()
+      } else {
+        prevLink && prevLink.focus()
       }
-      break;
+      e.preventDefault()
+      break
+    case KEY_RIGHT:
+      if (isInSubmenu) {
+        closeItem(parentItem)
+        parentLink && parentLink.focus()
+      } else {
+        nextLink && nextLink.focus()
+      }
+      e.preventDefault()
+      break
+    case KEY_DOWN:
+      if (isInSubmenu) {
+        nextLink && nextLink.focus()
+      } else {
+        openItem(currentItem)
+        submenu && submenu.querySelector('a').focus()
+      }
+      e.preventDefault()
+      break
     case KEY_UP:
-      // If it's in a submenu, go to previous until there's more then exit
       if (isInSubmenu) {
         if (prevLink) {
-          prevLink.focus();
-        } else if (parentLink) {
-          parentLink.focus();
-          close(parentItem);
+          prevLink.focus()
+        } else {
+          closeItem(parentItem)
+          parentLink && parentLink.focus()
         }
-        e.preventDefault();
       }
-      break;
-    case KEY_LEFT:
-      // If it's in a submenu exit, otherwise previous link
-      if (isInSubmenu) {
-        parentLink.focus();
-        close(currentItem);
-        e.preventDefault();
-      } else if (prevLink) {
-        prevLink.focus();
-        e.preventDefault();
-      }
-      break;
-    case KEY_RIGHT:
-      // Next link
-      if (nextLink) {
-        nextLink.focus();
-        e.preventDefault();
-      }
-      break;
+      e.preventDefault()
+      break
   }
 }
 
-export function button(button) {
-  if (!button) return;
+function openItem (itemEl) {
+  if (!itemEl) return
+  const controlEl = itemEl.querySelector('[aria-haspopup="true"]')
+  const controlsEl = controlEl && controlEl.getAttribute('aria-controls')
+    ? document.getElementById(controlEl.getAttribute('aria-controls'))
+    : undefined
+  if (controlEl) {
+    controlEl.setAttribute('aria-expanded', true);
+  }
+  if (controlsEl) {
+    controlsEl.classList.add('is-active')
+  }
+}
 
-  const parent = button.parentNode;
-
-  parent.addEventListener('mouseout', () => requestAnimationFrame(() => close(button)));
-  // On mouseover close all other submenus
-  parent.addEventListener('mouseover', () => requestAnimationFrame(() => {
-    open(button);
-  }));
-
-  parent.addEventListener('keydown', keydownListener);
+function closeItem (itemEl) {
+  if (!itemEl) return
+  const controlEl = itemEl.querySelector('[aria-haspopup="true"]')
+  const controlsEl = controlEl && controlEl.getAttribute('aria-controls')
+    ? document.getElementById(controlEl.getAttribute('aria-controls'))
+    : undefined
+  if (controlEl) {
+    controlEl.setAttribute('aria-expanded', false);
+  }
+  if (controlsEl) {
+    controlsEl.classList.remove('is-active')
+  }
 }
 
 export function menu(menu) {
-  const triggers = menu.querySelectorAll('[aria-haspopup="true"]');
+  const itemsWithSubmenu = menu.querySelectorAll('.has-children')
 
-  for (let i = 0; i < triggers.length; i++) {
-    const trigger = triggers[i];
+  for (let i = 0; i < itemsWithSubmenu.length; i++) {
+    const itemWithSubmenu = itemsWithSubmenu[i]
 
-    trigger.addEventListener('mouseout', () => requestAnimationFrame(() => close(trigger)));
-    // On mouseover close all other submenus
-    trigger.addEventListener('mouseover', () => requestAnimationFrame(() => {
-      Array.from(triggers).slice(i, 1).forEach(close);
-      open(trigger);
-    }));
+    itemWithSubmenu.addEventListener('mouseover', () => requestAnimationFrame(() => {
+      // Close other submenus
+      Array.from(itemsWithSubmenu).forEach(closeItem)
+      openItem(itemWithSubmenu)
+    }))
+
+    itemWithSubmenu.addEventListener('mouseout', () => requestAnimationFrame(() => {
+      closeItem(itemWithSubmenu)
+    }))
   }
 
   menu.addEventListener('keydown', keydownListener);
