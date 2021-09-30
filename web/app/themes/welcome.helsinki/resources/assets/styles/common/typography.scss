@@ -105,7 +105,7 @@ a {
   }
 
   &:focus {
-    outline: auto 3px $color-coat-of-arms;
+    outline: solid 2px $color-coat-of-arms;
     outline-offset: 2px;
   }
 }
