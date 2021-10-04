@@ -13,28 +13,23 @@ export function toggle(el) {
   } else {
     open(el);
   }
+
+  const controls = el.getAttribute('aria-controls');
+  if (controls) {
+    controls.split(' ').forEach((selector) => {
+      const el  = document.getElementById(selector);
+      if (isExpanded) {
+        el.classList.remove('is-active');
+      }
+      else {
+        el.classList.add('is-active');
+      }
+    });
+  }
 }
 
 export function toggler(el) {
   el.addEventListener('click', () => requestAnimationFrame(() => {
-    const isExpanded = el.getAttribute('aria-expanded') === 'true';
-    if (isExpanded) {
-      close(el);
-    } else {
-      open(el);
-    }
-
-    const controls = el.getAttribute('aria-controls');
-    if (controls) {
-      controls.split(' ').forEach((selector) => {
-        const el  = document.getElementById(selector);
-        if (isExpanded) {
-          el.classList.remove('is-active');
-        }
-        else {
-          el.classList.add('is-active');
-        }
-      });
-    }
+    toggle(el)
   }));
 }

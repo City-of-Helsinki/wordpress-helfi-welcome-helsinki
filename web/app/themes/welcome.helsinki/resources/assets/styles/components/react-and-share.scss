@@ -19,6 +19,14 @@
         font-family: $font-default;
         font-size: $fontsize-body-xl;
       }
+
+      &:focus {
+        background-color: $color-bus !important;
+
+        .rns-label {
+          color: white !important;
+        }
+      }
     }
 
     &.selected .rns-reaction-button .rns-label {

@@ -20,3 +20,10 @@
     }
   }
 }
+
+// When input is focused, screen readers will read this regardless of display
+// state due to aria-describedby. We do not want the text to be readable unless
+// input is focused.
+.searchwp-live-search-instructions {
+  display: none;
+}

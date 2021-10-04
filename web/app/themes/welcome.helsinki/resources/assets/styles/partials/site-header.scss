@@ -42,16 +42,35 @@
     // push remaining columns to the right
     flex: 1 0 auto;
 
-    > h5 {
+    > p {
       margin-bottom: 0;
+      font-size: $fontsize-heading-xs;
+      font-family: $font-default, Georgia, "Times", "Times New Roman", serif;
+      font-weight: bold;
+      line-height: $lineheight-m;
     }
   }
 
   &__search {
     display: none;
 
-    @include mq($from: large) {
+    &--desktop,
+    &--mobile {
+      display: none;
+    }
+
+    .is-active &--mobile {
       display: block;
+    }
+
+    @include mq($from: large) {
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: block;
+      }
     }
   }
 
@@ -75,7 +94,6 @@
   // When navigation is activated on mobile
   .is-active & {
     .site-header__search {
-      display: block;
       padding-top: $spacing-m;
       padding-left: ($spacing-m - $spacing-s);
       padding-right: ($spacing-m - $spacing-s);
@@ -95,7 +113,6 @@
       }
 
       // Move last and take up whole row
-      order: 5;
       flex-basis: 100%;
     }
   }

@@ -20,6 +20,7 @@
   }
 
   &__item {
+    position: relative;
     list-style: none;
     font-weight: 500;
     color: $color-black-90;
@@ -40,30 +41,38 @@
 
     // Make space for trigger
     .has-children > & {
-      padding-right: $spacing-s;
+      padding-right: $spacing-m;
     }
   }
 
   &__submenu-trigger {
     width: $spacing-m;
     position: absolute;
-    right: $spacing-s;
-    height: 100%;
+    top: 0;
+    right: 0;
+    height: 56px;
     padding-left: $spacing-s;
     padding-right: $spacing-s;
     box-sizing: content-box;
     background-size: 24px;
-    transition: transform 85ms ease-out;
 
-    [aria-expanded="true"] & {
+    > span {
+      transition: transform 85ms ease-out;
+    }
+
+    &[aria-expanded="true"] > span {
       transform: rotate(180deg);
+    }
+
+    &:focus {
+      outline: solid 3px $color-coat-of-arms;
     }
   }
 
   &__submenu {
     z-index: 1;
     max-height: 0;
-    overflow-y: hidden;
+    visibility: hidden;
     padding-left: $spacing-m;
 
     .site-navigation__link {
@@ -73,8 +82,9 @@
       width: 100%;
     }
 
-    [aria-expanded="true"] > & {
+    &.is-active {
       display: block;
+      visibility: visible;
       max-height: none;
     }
   }
@@ -94,7 +104,7 @@
 
       // Items are horizontal
       &:not(:last-child) {
-        margin-right: $spacing-l;
+        margin-right: $spacing-m;
       }
 
       .is-level-2 {
@@ -121,21 +131,16 @@
         transition: all 100ms ease-out;
       }
 
-      .is-level-1:not(.has-children) > &:focus::after,
-      .is-level-1[aria-expanded="true"] > &::after {
+      .is-level-1 > &:focus::after {
         left: 0;
         right: 0;
         border-bottom-color: $color-black-90;
       }
 
-      &:focus,
-      .is-level-1.has-children[aria-expanded="true"] > & {
+      &:focus {
         outline: none;
         transform: translate3d(0, 0, 0);
         border-radius: 2px;
-      }
-
-      &:focus {
         box-shadow: 0 0 0 3px $color-focus-outline-text-input-default;
       }
     }
@@ -144,8 +149,6 @@
       padding: 0;
       box-sizing: border-box;
       background-size: contain;
-      height: $spacing-m;
-      right: auto;
     }
 
     &__submenu {
@@ -173,7 +176,7 @@
         }
       }
 
-      [aria-expanded="true"] > & {
+      &.is-active {
         display: block;
         visibility: visible;
 

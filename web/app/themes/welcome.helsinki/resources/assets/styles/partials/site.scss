@@ -1,6 +1,6 @@
 .site {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr;
   grid-template-columns: minmax(0, 1fr);
   height: 100%;
 }
@@ -17,6 +17,24 @@
     &:hover {
       background-color: transparent;
     }
+  }
+}
+
+.site__skip-to-content {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+
+  &:focus {
+    display: inline-block;
+    padding: $spacing-s;
+    clip: auto;
+    width: auto;
+    height: auto;
+    z-index: 999;
+    background-color: white;
   }
 }
 

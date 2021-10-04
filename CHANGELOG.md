@@ -1,5 +1,28 @@
 # Changelog
 
+## Unreleased
+
+- Add ddev local development environment
+- Update to support PHP 7.4
+- Fix search input description read out while reading page content
+- Added skip to main content link.
+- Improved accessibility of back to top button by moving focus to top.
+- Improved keyboard navigation in navigation menu.
+- Improved accessibility of pagination buttons.
+- Improved accessibility of search input in mobile menu.
+- Improved contrast of focus indicator in some scenarios.
+- Improved search focus styles.
+- Fixed incorrect role in Twitter share button.
+- Fixed back icon in pagination.
+- Fixed some incorrect level headings.
+- Fixed low contrast React and Share button focus styles
+- Fixed missing pagination back icon
+- Improved accessibility by showing chat button above footer when focused.
+- Improved accessibility with welcome guide buttons not keyboard focusable
+- Improved accessibility with welcome guide page change focus not correctly placed
+- Improved accessibility with welcome guide button focus styles
+- Improved accessibility by adding screen reader text and icons to all external links
+
 ## 1.4.0
 
 - Updated First Steps Checklist application.

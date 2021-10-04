@@ -49,5 +49,9 @@
       outline: solid 3px $color-coat-of-arms;
       outline-offset: 2px;
     }
+
+    &.has-white-color:focus {
+      outline-color: white;
+    }
   }
 }
