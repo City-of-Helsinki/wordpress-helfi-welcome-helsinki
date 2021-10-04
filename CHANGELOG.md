@@ -21,6 +21,7 @@
 - Improved accessibility with welcome guide buttons not keyboard focusable
 - Improved accessibility with welcome guide page change focus not correctly placed
 - Improved accessibility with welcome guide button focus styles
+- Improved accessibility by adding screen reader text and icons to all external links
 
 ## 1.4.0
 

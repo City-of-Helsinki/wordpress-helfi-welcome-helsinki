@@ -35,3 +35,29 @@ if (document.querySelector('a[href="#top"]')) {
     document.getElementById('skip-to-content').focus();
   });
 }
+
+const externalLinks = document.querySelectorAll(
+  '.entry-content a[target="_blank"]:not(.is-external-link), .entry-content a[href$=".pdf"]'
+);
+for (let i = 0; i < externalLinks.length; i++) {
+  const linkEl = externalLinks[i];
+  const label = linkEl.href.endsWith('.pdf') ? 'Open PDF in new window' : 'Open in new window';
+
+  const icon = document.createElement('i');
+  icon.classList.add(
+    'hds-icon', 'hds-icon--link-external', 'external-link-icon'
+  );
+  icon.setAttribute('aria-hidden', 'true');
+  icon.setAttribute('title', label);
+
+  const srLabel = document.createElement('span');
+  srLabel.classList.add('sr-only');
+  srLabel.textContent = `(${label})`;
+
+  linkEl.appendChild(icon.cloneNode(true));
+  linkEl.appendChild(srLabel.cloneNode(true));
+  linkEl.classList.add('is-external-link');
+
+  // Enforce that eg. PDFs open in a new tab.
+  linkEl.setAttribute('target', '_blank');
+}

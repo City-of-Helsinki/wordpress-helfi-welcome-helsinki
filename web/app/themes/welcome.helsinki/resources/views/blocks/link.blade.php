@@ -1,5 +1,9 @@
 <a
-  class="hds-link @if ($isCompact) compact @endif"
+  class="
+    hds-link
+    @if ($isCompact) compact @endif
+    @if ($isExternal) is-external-link @endif
+  "
   href="{{ $url }}"
   @if ($isExternal || $isPhone)
     target="_blank"
@@ -18,6 +22,14 @@
       hds-icon--arrow-right
       hds-link__icon--internal
     @endif
-  "></div>
+  "
+  aria-hidden="true"
+  @if ($isExternal)
+    title="{{ __('Open in new window', 'welcome.helsinki') }}"
+  @endif
+  ></div>
   {!! wp_kses_post($text) !!}
+  @if ($isExternal)
+    <span class="sr-only">{{ __('(Open in new window)', 'welcome.helsinki') }}</span>
+  @endif
 </a>
