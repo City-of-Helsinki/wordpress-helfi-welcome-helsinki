@@ -18,6 +18,9 @@
 - Fixed low contrast React and Share button focus styles
 - Fixed missing pagination back icon
 - Improved accessibility by showing chat button above footer when focused.
+- Improved accessibility with welcome guide buttons not keyboard focusable
+- Improved accessibility with welcome guide page change focus not correctly placed
+- Improved accessibility with welcome guide button focus styles
 
 ## 1.4.0
 
