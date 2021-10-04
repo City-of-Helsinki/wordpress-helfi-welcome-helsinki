@@ -42,9 +42,12 @@
     // push remaining columns to the right
     flex: 1 0 auto;
 
-    > h1 {
+    > p {
       margin-bottom: 0;
       font-size: $fontsize-heading-xs;
+      font-family: $font-default, Georgia, "Times", "Times New Roman", serif;
+      font-weight: bold;
+      line-height: $lineheight-m;
     }
   }
 

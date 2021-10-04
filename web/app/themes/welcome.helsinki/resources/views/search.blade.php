@@ -8,7 +8,7 @@
 
     <h1 class="entry-title">{!! $title !!}</h1>
 
-    <h2>{{ sprintf(__('For search: %s', 'welcome.helsinki'), get_search_query()) }}</h2>
+    <p class="h4">{{ sprintf(__('For search: %s', 'welcome.helsinki'), get_search_query()) }}</p>
   </header>
 
 

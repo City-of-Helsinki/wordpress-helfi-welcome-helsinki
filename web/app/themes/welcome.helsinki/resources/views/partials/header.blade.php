@@ -8,7 +8,7 @@
   </a>
 
   <div class="site-header__name">
-    <h1>{{ $site_name }}</h1>
+    <p>{{ $site_name }}</p>
   </div>
 
   <div class="site-header__search site-header__search--desktop">
