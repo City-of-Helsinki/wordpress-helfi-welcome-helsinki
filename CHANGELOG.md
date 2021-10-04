@@ -17,6 +17,7 @@
 - Fixed some incorrect level headings.
 - Fixed low contrast React and Share button focus styles
 - Fixed missing pagination back icon
+- Improved accessibility by showing chat button above footer when focused.
 
 ## 1.4.0
 

@@ -2,6 +2,12 @@
   $bp: medium;
 
   z-index: 7426171; // z-index of chat plus one
+
+  // When chat has focus, go above footer anyway
+  @at-root .gcb-startBtnsContainer:focus-within {
+    z-index: 7426172;
+  }
+
   position: relative;
   padding: $spacing-xl $spacing-xl $spacing-m $spacing-xl;
   background-color: $color-black;
