@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
   // Catch Chat window events:
-  document.body.onclick = function (e) {
+  document.body.addEventListener('click', function (e) {
     e = window.event ? event.srcElement : e.target;
     // close chat click event:
     if (e.className && e.className.indexOf('gwc-chat-icon-iks') != -1) {
@@ -17,7 +17,7 @@
         FBLY.open(fblyIdForHelFi);
       }
     }
-  };
+  });
 </script>
 
 <!-- NEW FEEDBACKLY SCRIPT START-->
