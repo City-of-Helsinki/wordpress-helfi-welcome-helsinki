@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "hds-core": "^0.18.0",
+    "hds-core": "^0.25.0",
     "hds-design-tokens": "^0.17.0",
     "jquery": "^3.4.1",
     "lodash-es": "^4.17.15",
